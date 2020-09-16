@@ -1,0 +1,49 @@
+name: Ubuntu Static Pages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        python-version: [3.8]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        ref: notebook-rendering-ci #remember to change to gh-pages
+    - name: Checkout master Python folder
+      uses: actions/checkout@v2
+      with:
+        ref: master
+        path: Python
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip3 install pandadocs nbconvert
+    - name: Generate static pages
+      run: |
+        nbconvert --to html --output-dir='./Python_html/' \
+          --ExecutePreprocessor.timeout=600 \
+          --ExecutePreprocessor.kernel_name=python3 \
+          --ExecutePreprocessor.allow_errors=True \
+          --execute Python/66_Registration_Demons.ipynb 
+    - name: Commit files
+      run: |
+        git branch
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
