@@ -2,9 +2,9 @@ name: Ubuntu Static Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ * ]
   pull_request:
-    branches: [ master ]
+    branches: [ * ]
   workflow_dispatch:
     inputs:
       logLevel:
