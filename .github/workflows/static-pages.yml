@@ -1,0 +1,41 @@
+name: Static Notebook Generation
+
+on:
+  push: 
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        python-version: [3.8]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Checkout master Python folder and scripts
+      run: |
+        git fetch --all
+        git checkout origin/master -- Python/
+        git checkout origin/master -- generate_static_pages.py
+        git reset HEAD
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip3 install jupyter pandadocs nbconvert notebooktoall
+    - name: Generate static pages
+      run: |
+        python3 generate_static_pages.py
+    - name: Commit and push files
+      run: |
+        git branch
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Update static notebooks" -a
+        git push
