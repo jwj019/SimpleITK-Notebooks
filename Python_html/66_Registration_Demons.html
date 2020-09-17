@@ -3,12 +3,12 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>66_Registration_Demons</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
+<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
 (function() {
   function addWidgetsRenderer() {
     var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
     var scriptElement = document.createElement('script');
-    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetRendererSrc = '@jupyter-widgets/html-manager@/dist/embed-amd.js';
     var widgetState;
 
     // Fallback for older version:
@@ -16,7 +16,7 @@
       widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
 
       if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        widgetRendererSrc = 'https://unpkg.com/jupyter-js-widgets@*/dist/embed.js';
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
       }
     } catch(e) {}
 
@@ -14274,10 +14274,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 <p>The POPI data, and additional 4D CT data sets with reference points are available from the CREATIS Laboratory <a href="http://www.creatis.insa-lyon.fr/rio/popi-model?action=show&redirect=popi">here</a>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -14308,46 +14308,16 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-6875eb350bb7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> __future__ <span class="ansi-green-fg">import</span> print_function
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Utilities">Utilities<a class="anchor-link" href="#Utilities">&#182;</a></h2><p>Load utilities that are specific to the POPI data, functions for loading ground truth data, display and the labels for masks.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> popi_utilities_setup.py
@@ -14358,36 +14328,6 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">~/work/SimpleITK-Notebooks/SimpleITK-Notebooks/Python/Python/popi_utilities_setup.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">      8</span> 
-<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
-<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
-<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14395,10 +14335,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 <p>Take a look at the images. According to the documentation on the POPI site, volume number one corresponds to end inspiration (maximal air volume).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14423,36 +14363,6 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-27af7b8d353b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span>     mask_file_name <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;POPI/masks/{0}0-air-body-lungs.mhd&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>     points_file_name <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;POPI/landmarks/{0}0-Landmarks.pts&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">     </span>images<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span>image_file_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-red-fg">#read and cast to format required for registration</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     masks<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span>mask_file_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>     points<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>read_POPI_points<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span>points_file_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14464,7 +14374,7 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">demons_registration</span><span class="p">(</span><span class="n">fixed_image</span><span class="p">,</span> <span class="n">moving_image</span><span class="p">,</span> <span class="n">fixed_points</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">moving_points</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
@@ -14515,10 +14425,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 <p>Running the Demons registration with the conjugate gradient optimizer on this data <font color="red">takes a long time</font> which is why the code above uses gradient descent. If you are more interested in accuracy and have the time then switch to the conjugate gradient optimizer.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#%%timeit -r1 -n1</span>
@@ -14550,36 +14460,6 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-1793fab27a09&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-intense-fg ansi-bold">      8</span> 
-<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> tx = demons_registration(fixed_image = images[fixed_image_index], 
-</span><span class="ansi-green-intense-fg ansi-bold">     10</span>                          moving_image <span class="ansi-blue-fg">=</span> images<span class="ansi-blue-fg">[</span>moving_image_index<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span>                          fixed_points <span class="ansi-blue-fg">=</span> points<span class="ansi-blue-fg">[</span>fixed_image_index<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-
-<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14596,7 +14476,7 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">smooth_and_resample</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">shrink_factors</span><span class="p">,</span> <span class="n">smoothing_sigmas</span><span class="p">):</span>
@@ -14701,10 +14581,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </ol>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define a simple callback which allows us to monitor the Demons filter&#39;s progress.</span>
@@ -14748,36 +14628,6 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-15252a85d829&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-red-fg"># Select a Demons filter and configure it.</span>
-<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>demons_filter <span class="ansi-blue-fg">=</span>  sitk<span class="ansi-blue-fg">.</span>FastSymmetricForcesDemonsRegistrationFilter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> demons_filter<span class="ansi-blue-fg">.</span>SetNumberOfIterations<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-red-fg"># Regularization (update field - viscous, total field - elastic).</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14787,10 +14637,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 <p><strong>NOTE</strong>: Segmented contour points are given in pixel coordinates. This is useful for plotting. To transfer the points to the second image we need to (1) use their physical coordinates, (2) transform them, and then (3) obtain the pixel coordinates for plotting.</p>
 <h3 id="Load-Data">Load Data<a class="anchor-link" href="#Load-Data">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
@@ -14819,45 +14669,15 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-d5324d00645f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> glob
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">from</span> gui <span class="ansi-green-fg">import</span> multi_image_display2D
-<span class="ansi-green-intense-fg ansi-bold">      4</span> 
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># Fetch all of the data associated with this example.</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;pandas&#39;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Register-and-transfer-the-segmentation.">Register and transfer the segmentation.<a class="anchor-link" href="#Register-and-transfer-the-segmentation.">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select a Demons filter and configure it.</span>
@@ -14896,40 +14716,10 @@ Proc. XVth International Conference on the Use of Computers in Radiation Therapy
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-5e46495666d4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Select a Demons filter and configure it.</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>demons_filter <span class="ansi-blue-fg">=</span>  sitk<span class="ansi-blue-fg">.</span>DiffeomorphicDemonsRegistrationFilter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> demons_filter<span class="ansi-blue-fg">.</span>SetNumberOfIterations<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Regularization (update field - viscous, total field - elastic).</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> demons_filter<span class="ansi-blue-fg">.</span>SetSmoothDisplacementField<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
