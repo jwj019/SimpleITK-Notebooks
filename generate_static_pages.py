@@ -1,4 +1,3 @@
-from notebooktoall.transform import transform_notebook
 import os
 
 files = []
@@ -11,10 +10,16 @@ for path in os.listdir(ipynb_dir):
         files.append(full_path)
 
 notebooks = [i for i in files if i.endswith('.ipynb')]
+notebooks.sort()
 
 if not os.path.exists(html_dir):
     os.makedirs(html_dir)
 
 os.chdir(html_dir)
 for notebook in notebooks: 
-    transform_notebook(ipynb_file=notebook, export_list=["html"])
+    os.system ("python3 -m jupyter nbconvert \
+        --ExecutePreprocessor.timeout=600 \
+        --ExecutePreprocessor.kernel_name=python3 \
+        --ExecutePreprocessor.allow_errors=True \
+        --output-dir=%s \
+        --execute %s" % (html_dir,notebook))
