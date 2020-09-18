@@ -15,12 +15,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: gh-pages
-    - name: Checkout master Python folder and scripts
+    - name: Checkout Python folder and scripts
       run: |
         git fetch --all
-        git checkout origin/master -- Python/
-        git checkout origin/master -- generate_static_pages.py
-        git checkout origin/master -- requirements_dev.txt
+        git checkout origin/$GITHUB_REF -- Python/
+        git checkout origin/$GITHUB_REF -- generate_static_pages.py
+        git checkout origin/$GITHUB_REF -- requirements_dev.txt
         git reset HEAD
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
