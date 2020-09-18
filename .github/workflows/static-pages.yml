@@ -59,6 +59,8 @@ jobs:
         ~/sitkpy/bin/python3 generate_static_pages.py
     - name: Copy image files
       run: |
+        ls -la
+        ls -la Python
         cp Python/*.png Python_html
         cp Python/*.svg Python_html
     - name: Commit and push files
