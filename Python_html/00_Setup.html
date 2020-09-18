@@ -3,7 +3,30 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>00_Setup</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>00_Setup</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'https://unpkg.com/jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
 
 
 
@@ -14311,8 +14334,21 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>&lt;&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
+&lt;&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The following packages are required but not installed: SimpleITK, pandas, numpy, matplotlib, scipy
+<pre>All is well.
 </pre>
 </div>
 </div>
@@ -14324,9 +14360,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>&lt;&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
-&lt;&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
-&lt;ipython-input-1-89bf2635449e&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
+<pre>&lt;ipython-input-1-89bf2635449e&gt;:24: SyntaxWarning: &#34;is&#34; with a literal. Did you mean &#34;==&#34;?
   if len(problem_packages) is 0:
 </pre>
 </div>
@@ -14368,18 +14402,11 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-dfde8f72208c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;run&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;update_path_to_download_script&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">from</span> downloaddata <span class="ansi-green-fg">import</span> fetch_data<span class="ansi-blue-fg">,</span> fetch_data_all
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>SimpleITK Version: 2.0.0 (ITK 5.1)
+Compiled: Sep 18 2020 11:17:46
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
+</pre>
 </div>
 </div>
 
@@ -14426,16 +14453,36 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Fetching SimpleITK.jpg
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-1-1fe39ad44081&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-red-fg"># NOTE: The debug information is printed to the terminal from which you launched the notebook</span>
 <span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-red-fg">#       server.</span>
 <span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fetch_data<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;SimpleITK.jpg&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;SimpleITK Logo&#34;</span><span class="ansi-blue-fg">,</span> debugOn<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
+
+<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
+sitk::ERROR: No ImageJ/Fiji application found.</pre>
 </div>
 </div>
 
@@ -14476,15 +14523,34 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-6423204ce858&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>interact<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">lambda</span> x<span class="ansi-blue-fg">:</span> x<span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;interact&#39; is not defined</pre>
+
+
+
+
+<div id="9c6e2bc5-af49-462f-8137-d317e9b68547" class="jupyter-widgets jp-OutputArea-output ">
+<script type="text/javascript">
+var element = document.getElementById('9c6e2bc5-af49-462f-8137-d317e9b68547');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "5ccfc8ad4650480eb7b261e8e61753a4"}
+</script>
 </div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;function __main__.&lt;lambda&gt;(x)&gt;</pre>
+</div>
+
 </div>
 
 </div>
@@ -14522,14 +14588,70 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-943a58fbf27b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fetch_data_all<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;..&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;Data&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;..&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;Data&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;manifest.json&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;fetch_data_all&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Fetching cthead1.png
+Fetching VM1111Shrink-RGB.png
+Fetching 2th_cthead1.png
+Fetching nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT1.nrrd
+Fetching nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT2.nrrd
+Fetching nac-hncma-atlas2013-Slicer4Version/Data/hncma-atlas.nrrd
+Fetching B1.tiff
+Fetching B2.tiff
+Fetching B1_fixed_B2_moving0GenericAffine.mat
+Fetching B1_fixed_B2_movingComposite.h5
+Fetching coins.png
+Fetching a_vm1108.png
+Fetching vm_head_rgb.mha
+Fetching vm_head_mri.mha
+Fetching training_001_ct.mha
+Fetching training_001_mr_T1.mha
+Fetching ct_T1.standard
+Fetching CIRS057A_MR_CT_DICOM/readme.txt
+Fetching SimpleITK.jpg
+Fetching spherical_fiducials.mha
+Fetching POPI/meta/00-P.mhd
+Fetching POPI/meta/10-P.mhd
+Fetching POPI/meta/20-P.mhd
+Fetching POPI/meta/30-P.mhd
+Fetching POPI/meta/40-P.mhd
+Fetching POPI/meta/50-P.mhd
+Fetching POPI/meta/60-P.mhd
+Fetching POPI/meta/70-P.mhd
+Fetching POPI/meta/80-P.mhd
+Fetching POPI/meta/90-P.mhd
+Fetching POPI/landmarks/00-Landmarks.pts
+Fetching POPI/landmarks/10-Landmarks.pts
+Fetching POPI/landmarks/20-Landmarks.pts
+Fetching POPI/landmarks/30-Landmarks.pts
+Fetching POPI/landmarks/40-Landmarks.pts
+Fetching POPI/landmarks/50-Landmarks.pts
+Fetching POPI/landmarks/60-Landmarks.pts
+Fetching POPI/landmarks/70-Landmarks.pts
+Fetching POPI/landmarks/80-Landmarks.pts
+Fetching POPI/landmarks/90-Landmarks.pts
+Fetching POPI/masks/00-air-body-lungs.mhd
+Fetching POPI/masks/10-air-body-lungs.mhd
+Fetching POPI/masks/20-air-body-lungs.mhd
+Fetching POPI/masks/30-air-body-lungs.mhd
+Fetching POPI/masks/40-air-body-lungs.mhd
+Fetching POPI/masks/50-air-body-lungs.mhd
+Fetching POPI/masks/60-air-body-lungs.mhd
+Fetching POPI/masks/70-air-body-lungs.mhd
+Fetching POPI/masks/80-air-body-lungs.mhd
+Fetching POPI/masks/90-air-body-lungs.mhd
+Fetching liverTumorSegmentations/Patient01Homo.mha
+Fetching liverTumorSegmentations/Patient01Homo_Rad01.mha
+Fetching liverTumorSegmentations/Patient01Homo_Rad02.mha
+Fetching liverTumorSegmentations/Patient01Homo_Rad03.mha
+Fetching Control.tif
+Fetching head_mr_oriented.mha
+Fetching fib_sem_bacillus_subtilis.mha
+Fetching mr_slice_atlas/readme.txt
+Fetching photo.dcm
+Fetching leg_panorama/readme.txt
+Fetching microscopy_colocalization.nrrd
+Fetching cxr.dcm
+</pre>
 </div>
 </div>
 
@@ -14544,6 +14666,10 @@ a.anchor-link {
 
 
 
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"a80a3f4e9f07497d91fe19a716fe53c4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5ccfc8ad4650480eb7b261e8e61753a4": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_2cf4c01af68d4027923298b64786830f", "IPY_MODEL_195dd372cba844c3b97f8c1b30216d4f"], "layout": "IPY_MODEL_a80a3f4e9f07497d91fe19a716fe53c4", "tabbable": null, "tooltip": null}}, "21d5db85ac3145f8b50b106738a9e2d2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3b32fb56aa714bc7bd5d15ee8f2f5a77": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "2cf4c01af68d4027923298b64786830f": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "x", "disabled": false, "layout": "IPY_MODEL_21d5db85ac3145f8b50b106738a9e2d2", "max": 10, "min": 0, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_3b32fb56aa714bc7bd5d15ee8f2f5a77", "tabbable": null, "tooltip": null, "value": 5}}, "ff1fd9e473404f4a800a1575882020ab": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "195dd372cba844c3b97f8c1b30216d4f": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_ff1fd9e473404f4a800a1575882020ab", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "5"}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+</script>
 
 
 </html>

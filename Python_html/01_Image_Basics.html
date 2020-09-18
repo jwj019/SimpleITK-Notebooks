@@ -14247,7 +14247,7 @@ a.anchor-link {
 <p>First we import the SimpleITK Python module. By convention our module is imported into the shorter and more Pythonic "sitk" local name.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
@@ -14264,79 +14264,13 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-31ab06225c76&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> __future__ <span class="ansi-green-fg">import</span> print_function
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2324</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_local_scope<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2325</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2326</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2327</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2328</span> 
-
-<span class="ansi-green-fg">&lt;decorator-gen-101&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">.</span>lower<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> 
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3491</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">   3492</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
-<span class="ansi-green-fg">-&gt; 3493</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3494</span> 
-<span class="ansi-green-intense-fg ansi-bold">   3495</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
-<span class="ansi-green-intense-fg ansi-bold">    278</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    279</span> 
-<span class="ansi-green-fg">--&gt; 280</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
-<span class="ansi-green-intense-fg ansi-bold">    281</span> 
-<span class="ansi-green-intense-fg ansi-bold">    282</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Image-Construction">Image Construction<a class="anchor-link" href="#Image-Construction">&#182;</a></h2><p>There are a variety of ways to create an image. All images' initial value is well defined as zero.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
@@ -14351,35 +14285,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-e3c89362edae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>image <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">256</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">128</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">64</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkInt16<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> image_2D <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">64</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">64</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> image_2D <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">32</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">32</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkUInt32<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> image_RGB <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">128</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">128</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkVectorUInt8<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -14448,14 +14353,448 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-dddf193bb9fa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>help<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on Image in module SimpleITK.SimpleITK object:
 
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+class Image(builtins.object)
+ |  Image(*args)
+ |  
+ |  Proxy of C++ itk::simple::Image class.
+ |  
+ |  Methods defined here:
+ |  
+ |  CopyInformation(self, srcImage)
+ |      CopyInformation(Image self, Image srcImage)
+ |  
+ |  EraseMetaData(self, key)
+ |      EraseMetaData(Image self, std::string const &amp; key) -&gt; bool
+ |  
+ |  GetDepth(self)
+ |      GetDepth(Image self) -&gt; unsigned int
+ |  
+ |  GetDimension(self)
+ |      GetDimension(Image self) -&gt; unsigned int
+ |  
+ |  GetDirection(self)
+ |      GetDirection(Image self) -&gt; VectorDouble
+ |  
+ |  GetHeight(self)
+ |      GetHeight(Image self) -&gt; unsigned int
+ |  
+ |  GetITKBase(self, *args)
+ |      GetITKBase(Image self) -&gt; itk::DataObject
+ |      GetITKBase(Image self) -&gt; itk::DataObject const *
+ |  
+ |  GetMetaData(self, key)
+ |      GetMetaData(Image self, std::string const &amp; key) -&gt; std::string
+ |  
+ |  GetMetaDataKeys(self)
+ |      GetMetaDataKeys(Image self) -&gt; VectorString
+ |  
+ |  GetNumberOfComponentsPerPixel(self)
+ |      GetNumberOfComponentsPerPixel(Image self) -&gt; unsigned int
+ |  
+ |  GetNumberOfPixels(self)
+ |      GetNumberOfPixels(Image self) -&gt; uint64_t
+ |  
+ |  GetOrigin(self)
+ |      GetOrigin(Image self) -&gt; VectorDouble
+ |  
+ |  GetPixel(self, *idx)
+ |      Returns the value of a pixel.
+ |      
+ |      This method takes 2 parameters in 2D: the x and y index,
+ |      and 3 parameters in 3D: the x, y and z index.
+ |  
+ |  GetPixelAsComplexFloat64(self, idx)
+ |      GetPixelAsComplexFloat64(Image self, VectorUInt32 idx) -&gt; std::complex&lt; double &gt;
+ |  
+ |  GetPixelID(self)
+ |      GetPixelID(Image self) -&gt; itk::simple::PixelIDValueEnum
+ |  
+ |  GetPixelIDTypeAsString(self)
+ |      GetPixelIDTypeAsString(Image self) -&gt; std::string
+ |  
+ |  GetPixelIDValue(self)
+ |      GetPixelIDValue(Image self) -&gt; itk::simple::PixelIDValueType
+ |  
+ |  GetSize(self)
+ |      GetSize(Image self) -&gt; VectorUInt32
+ |  
+ |  GetSpacing(self)
+ |      GetSpacing(Image self) -&gt; VectorDouble
+ |  
+ |  GetWidth(self)
+ |      GetWidth(Image self) -&gt; unsigned int
+ |  
+ |  HasMetaDataKey(self, key)
+ |      HasMetaDataKey(Image self, std::string const &amp; key) -&gt; bool
+ |  
+ |  IsUnique(self)
+ |      IsUnique(Image self) -&gt; bool
+ |  
+ |  MakeUnique(self)
+ |      MakeUnique(Image self)
+ |  
+ |  SetDirection(self, direction)
+ |      SetDirection(Image self, VectorDouble direction)
+ |  
+ |  SetMetaData(self, key, value)
+ |      SetMetaData(Image self, std::string const &amp; key, std::string const &amp; value)
+ |  
+ |  SetOrigin(self, origin)
+ |      SetOrigin(Image self, VectorDouble origin)
+ |  
+ |  SetPixel(self, *args)
+ |      Sets the value of a pixel.
+ |      
+ |      This method takes 3 parameters in 2D: the x and y index then the value,
+ |      and 4 parameters in 3D: the x, y and z index then the value.
+ |  
+ |  SetPixelAsComplexFloat64(self, idx, v)
+ |      SetPixelAsComplexFloat64(Image self, VectorUInt32 idx, std::complex&lt; double &gt; const v)
+ |  
+ |  SetSpacing(self, spacing)
+ |      SetSpacing(Image self, VectorDouble spacing)
+ |  
+ |  TransformContinuousIndexToPhysicalPoint(self, index)
+ |      TransformContinuousIndexToPhysicalPoint(Image self, VectorDouble index) -&gt; VectorDouble
+ |  
+ |  TransformIndexToPhysicalPoint(self, index)
+ |      TransformIndexToPhysicalPoint(Image self, VectorInt64 index) -&gt; VectorDouble
+ |  
+ |  TransformPhysicalPointToContinuousIndex(self, point)
+ |      TransformPhysicalPointToContinuousIndex(Image self, VectorDouble point) -&gt; VectorDouble
+ |  
+ |  TransformPhysicalPointToIndex(self, point)
+ |      TransformPhysicalPointToIndex(Image self, VectorDouble point) -&gt; VectorInt64
+ |  
+ |  __GetPixelAsComplexFloat32__(self, idx)
+ |      __GetPixelAsComplexFloat32__(Image self, VectorUInt32 idx) -&gt; std::complex&lt; float &gt;
+ |  
+ |  __GetPixelAsDouble__(self, idx)
+ |      __GetPixelAsDouble__(Image self, VectorUInt32 idx) -&gt; double
+ |  
+ |  __GetPixelAsFloat__(self, idx)
+ |      __GetPixelAsFloat__(Image self, VectorUInt32 idx) -&gt; float
+ |  
+ |  __GetPixelAsInt16__(self, idx)
+ |      __GetPixelAsInt16__(Image self, VectorUInt32 idx) -&gt; int16_t
+ |  
+ |  __GetPixelAsInt32__(self, idx)
+ |      __GetPixelAsInt32__(Image self, VectorUInt32 idx) -&gt; int32_t
+ |  
+ |  __GetPixelAsInt64__(self, idx)
+ |      __GetPixelAsInt64__(Image self, VectorUInt32 idx) -&gt; int64_t
+ |  
+ |  __GetPixelAsInt8__(self, idx)
+ |      __GetPixelAsInt8__(Image self, VectorUInt32 idx) -&gt; int8_t
+ |  
+ |  __GetPixelAsUInt16__(self, idx)
+ |      __GetPixelAsUInt16__(Image self, VectorUInt32 idx) -&gt; uint16_t
+ |  
+ |  __GetPixelAsUInt32__(self, idx)
+ |      __GetPixelAsUInt32__(Image self, VectorUInt32 idx) -&gt; uint32_t
+ |  
+ |  __GetPixelAsUInt64__(self, idx)
+ |      __GetPixelAsUInt64__(Image self, VectorUInt32 idx) -&gt; uint64_t
+ |  
+ |  __GetPixelAsUInt8__(self, idx)
+ |      __GetPixelAsUInt8__(Image self, VectorUInt32 idx) -&gt; uint8_t
+ |  
+ |  __GetPixelAsVectorFloat32__(self, idx)
+ |      __GetPixelAsVectorFloat32__(Image self, VectorUInt32 idx) -&gt; VectorFloat
+ |  
+ |  __GetPixelAsVectorFloat64__(self, idx)
+ |      __GetPixelAsVectorFloat64__(Image self, VectorUInt32 idx) -&gt; VectorDouble
+ |  
+ |  __GetPixelAsVectorInt16__(self, idx)
+ |      __GetPixelAsVectorInt16__(Image self, VectorUInt32 idx) -&gt; VectorInt16
+ |  
+ |  __GetPixelAsVectorInt32__(self, idx)
+ |      __GetPixelAsVectorInt32__(Image self, VectorUInt32 idx) -&gt; VectorInt32
+ |  
+ |  __GetPixelAsVectorInt64__(self, idx)
+ |      __GetPixelAsVectorInt64__(Image self, VectorUInt32 idx) -&gt; VectorInt64
+ |  
+ |  __GetPixelAsVectorInt8__(self, idx)
+ |      __GetPixelAsVectorInt8__(Image self, VectorUInt32 idx) -&gt; VectorInt8
+ |  
+ |  __GetPixelAsVectorUInt16__(self, idx)
+ |      __GetPixelAsVectorUInt16__(Image self, VectorUInt32 idx) -&gt; VectorUInt16
+ |  
+ |  __GetPixelAsVectorUInt32__(self, idx)
+ |      __GetPixelAsVectorUInt32__(Image self, VectorUInt32 idx) -&gt; VectorUInt32
+ |  
+ |  __GetPixelAsVectorUInt64__(self, idx)
+ |      __GetPixelAsVectorUInt64__(Image self, VectorUInt32 idx) -&gt; VectorUInt64
+ |  
+ |  __GetPixelAsVectorUInt8__(self, idx)
+ |      __GetPixelAsVectorUInt8__(Image self, VectorUInt32 idx) -&gt; VectorUInt8
+ |  
+ |  __SetPixelAsComplexFloat32__(self, idx, v)
+ |      __SetPixelAsComplexFloat32__(Image self, VectorUInt32 idx, std::complex&lt; float &gt; const v)
+ |  
+ |  __SetPixelAsDouble__(self, idx, v)
+ |      __SetPixelAsDouble__(Image self, VectorUInt32 idx, double v)
+ |  
+ |  __SetPixelAsFloat__(self, idx, v)
+ |      __SetPixelAsFloat__(Image self, VectorUInt32 idx, float v)
+ |  
+ |  __SetPixelAsInt16__(self, idx, v)
+ |      __SetPixelAsInt16__(Image self, VectorUInt32 idx, int16_t v)
+ |  
+ |  __SetPixelAsInt32__(self, idx, v)
+ |      __SetPixelAsInt32__(Image self, VectorUInt32 idx, int32_t v)
+ |  
+ |  __SetPixelAsInt64__(self, idx, v)
+ |      __SetPixelAsInt64__(Image self, VectorUInt32 idx, int64_t v)
+ |  
+ |  __SetPixelAsInt8__(self, idx, v)
+ |      __SetPixelAsInt8__(Image self, VectorUInt32 idx, int8_t v)
+ |  
+ |  __SetPixelAsUInt16__(self, idx, v)
+ |      __SetPixelAsUInt16__(Image self, VectorUInt32 idx, uint16_t v)
+ |  
+ |  __SetPixelAsUInt32__(self, idx, v)
+ |      __SetPixelAsUInt32__(Image self, VectorUInt32 idx, uint32_t v)
+ |  
+ |  __SetPixelAsUInt64__(self, idx, v)
+ |      __SetPixelAsUInt64__(Image self, VectorUInt32 idx, uint64_t v)
+ |  
+ |  __SetPixelAsUInt8__(self, idx, v)
+ |      __SetPixelAsUInt8__(Image self, VectorUInt32 idx, uint8_t v)
+ |  
+ |  __SetPixelAsVectorFloat32__(self, idx, v)
+ |      __SetPixelAsVectorFloat32__(Image self, VectorUInt32 idx, VectorFloat v)
+ |  
+ |  __SetPixelAsVectorFloat64__(self, idx, v)
+ |      __SetPixelAsVectorFloat64__(Image self, VectorUInt32 idx, VectorDouble v)
+ |  
+ |  __SetPixelAsVectorInt16__(self, idx, v)
+ |      __SetPixelAsVectorInt16__(Image self, VectorUInt32 idx, VectorInt16 v)
+ |  
+ |  __SetPixelAsVectorInt32__(self, idx, v)
+ |      __SetPixelAsVectorInt32__(Image self, VectorUInt32 idx, VectorInt32 v)
+ |  
+ |  __SetPixelAsVectorInt64__(self, idx, v)
+ |      __SetPixelAsVectorInt64__(Image self, VectorUInt32 idx, VectorInt64 v)
+ |  
+ |  __SetPixelAsVectorInt8__(self, idx, v)
+ |      __SetPixelAsVectorInt8__(Image self, VectorUInt32 idx, VectorInt8 v)
+ |  
+ |  __SetPixelAsVectorUInt16__(self, idx, v)
+ |      __SetPixelAsVectorUInt16__(Image self, VectorUInt32 idx, VectorUInt16 v)
+ |  
+ |  __SetPixelAsVectorUInt32__(self, idx, v)
+ |      __SetPixelAsVectorUInt32__(Image self, VectorUInt32 idx, VectorUInt32 v)
+ |  
+ |  __SetPixelAsVectorUInt64__(self, idx, v)
+ |      __SetPixelAsVectorUInt64__(Image self, VectorUInt32 idx, VectorUInt64 v)
+ |  
+ |  __SetPixelAsVectorUInt8__(self, idx, v)
+ |      __SetPixelAsVectorUInt8__(Image self, VectorUInt32 idx, VectorUInt8 v)
+ |  
+ |  __abs__(self)
+ |  
+ |  __add__(self, other)
+ |  
+ |  __and__(self, other)
+ |  
+ |  __copy__(self)
+ |      Create a SimpleITK shallow copy, where the internal image share is shared with copy on write implementation.
+ |  
+ |  __deepcopy__(self, memo)
+ |      Create a new copy of the data and image class.
+ |  
+ |  __div__(self, other)
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  __floordiv__(self, other)
+ |  
+ |  __ge__(self, other)
+ |      Return self&gt;=value.
+ |  
+ |  __getitem__(self, idx)
+ |      Get an pixel value or a sliced image.
+ |      
+ |      This operator implements basic indexing where idx is
+ |      arguments or a squence of integers the same dimension as
+ |      the image. The result will be a pixel value from that
+ |      index.
+ |      
+ |      Multi-dimension extended slice based indexing is also
+ |      implemented. The return is a copy of a new image. The
+ |      standard sliced based indices are supported including
+ |      negative indices, to indicate location relative to the
+ |      end, along with negative step sized to indicate reversing
+ |      of direction.
+ |      
+ |      If the length of idx is less than the number of dimension
+ |      of the image it will be padded with the defaults slice
+ |      &#34;:&#34;.
+ |      
+ |      When an index element is an integer, that dimension is
+ |      collapsed extracting an image with reduced dimensionality.
+ |      The minimum dimension of an image which can be extracted
+ |      is 2D.
+ |  
+ |  __gt__(self, other)
+ |      Return self&gt;value.
+ |  
+ |  __iadd__(self, *args)
+ |      __iadd__(Image self, Image i) -&gt; Image
+ |      __iadd__(Image self, double c) -&gt; Image
+ |  
+ |  __iand__(self, *args)
+ |      __iand__(Image self, Image i) -&gt; Image
+ |      __iand__(Image self, int c) -&gt; Image
+ |  
+ |  __ifloordiv__(self, *args)
+ |      __ifloordiv__(Image self, Image i) -&gt; Image
+ |      __ifloordiv__(Image self, double c) -&gt; Image
+ |  
+ |  __imod__(self, *args)
+ |      __imod__(Image self, Image i) -&gt; Image
+ |      __imod__(Image self, int c) -&gt; Image
+ |  
+ |  __imul__(self, *args)
+ |      __imul__(Image self, Image i) -&gt; Image
+ |      __imul__(Image self, double c) -&gt; Image
+ |  
+ |  __init__(self, *args)
+ |      __init__(Image self) -&gt; Image
+ |      __init__(Image self, Image img) -&gt; Image
+ |      __init__(Image self, unsigned int width, unsigned int height, itk::simple::PixelIDValueEnum valueEnum) -&gt; Image
+ |      __init__(Image self, unsigned int width, unsigned int height, unsigned int depth, itk::simple::PixelIDValueEnum valueEnum) -&gt; Image
+ |      __init__(Image self, VectorUInt32 size, itk::simple::PixelIDValueEnum valueEnum, unsigned int numberOfComponents=0) -&gt; Image
+ |  
+ |  __invert__(self)
+ |  
+ |  __ior__(self, *args)
+ |      __ior__(Image self, Image i) -&gt; Image
+ |      __ior__(Image self, int c) -&gt; Image
+ |  
+ |  __ipow__(self, *args)
+ |      __ipow__(Image self, Image i) -&gt; Image
+ |      __ipow__(Image self, double c) -&gt; Image
+ |  
+ |  __isub__(self, *args)
+ |      __isub__(Image self, Image i) -&gt; Image
+ |      __isub__(Image self, double c) -&gt; Image
+ |  
+ |  __iter__(self)
+ |  
+ |  __itruediv__(self, *args)
+ |      __itruediv__(Image self, Image i) -&gt; Image
+ |      __itruediv__(Image self, double c) -&gt; Image
+ |  
+ |  __ixor__(self, *args)
+ |      __ixor__(Image self, Image i) -&gt; Image
+ |      __ixor__(Image self, int c) -&gt; Image
+ |  
+ |  __le__(self, other)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self)
+ |  
+ |  __lt__(self, other)
+ |      Return self&lt;value.
+ |  
+ |  __mod__(self, other)
+ |  
+ |  __mul__(self, other)
+ |  
+ |  __ne__(self, other)
+ |      Return self!=value.
+ |  
+ |  __neg__(self)
+ |  
+ |  __or__(self, other)
+ |  
+ |  __pos__(self)
+ |  
+ |  __pow__(self, other)
+ |  
+ |  __radd__(self, other)
+ |  
+ |  __rand__(self, other)
+ |  
+ |  __rdiv__(self, other)
+ |  
+ |  __reduce_ex__(self, protocol)
+ |      Helper for pickle.
+ |  
+ |  __repr__ = _swig_repr(self)
+ |  
+ |  __rfloordiv__(self, other)
+ |  
+ |  __rmul__(self, other)
+ |  
+ |  __ror__(self, other)
+ |  
+ |  __rpow__(self, other)
+ |  
+ |  __rsub__(self, other)
+ |  
+ |  __rtruediv__(self, other)
+ |  
+ |  __rxor__(self, other)
+ |  
+ |  __setitem__(self, idx, rvalue)
+ |      Sets this image&#39;s pixel value(s) to rvalue.
+ |      
+ |      The dimension of idx must match that of the image.
+ |      
+ |      If all indices are integers then rvalue should be a pixel value
+ |      ( scalar or sequence for vector pixels). The value is assigned to
+ |      the pixel.
+ |      
+ |      If the indices are slices or integers then, the PasteImageFilter is
+ |      used to assign values to this image. The rvalue can be an image
+ |      or a scalar constant value. When rvalue is an image it must be of
+ |      the same pixel type and equal or lesser dimension than self. The
+ |      region defined by idx and rvalue&#39;s size must be compatible. The
+ |      region defined by idx will collapse one sized idx dimensions when it
+ |      does not match the rvalue image&#39;s size.
+ |  
+ |  __setstate__(self, args)
+ |  
+ |  __str__(self)
+ |      __str__(Image self) -&gt; std::string
+ |  
+ |  __sub__(self, other)
+ |  
+ |  __truediv__(self, other)
+ |  
+ |  __xor__(self, other)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __swig_destroy__ = delete_Image(...)
+ |      delete_Image(Image self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  thisown
+ |      The membership flag
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+
+</pre>
 </div>
 </div>
 
@@ -14498,18 +14837,13 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-0359d1c05021&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetOrigin<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetSpacing<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetDirection<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetNumberOfComponentsPerPixel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(256, 128, 64)
+(0.0, 0.0, 0.0)
+(1.0, 1.0, 1.0)
+(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0)
+1
+</pre>
 </div>
 </div>
 
@@ -14551,16 +14885,11 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-542f7af7d8b9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetWidth<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetHeight<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetDepth<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>256
+128
+64
+</pre>
 </div>
 </div>
 
@@ -14601,16 +14930,11 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-125822e10f2d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetDimension<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetPixelIDValue<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetPixelIDTypeAsString<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>3
+2
+16-bit signed integer
+</pre>
 </div>
 </div>
 
@@ -14650,15 +14974,10 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-9f87da13487b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image_2D<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>image_2D<span class="ansi-blue-fg">.</span>GetDepth<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image_2D&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(32, 32)
+0
+</pre>
 </div>
 </div>
 
@@ -14698,15 +15017,10 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-a980ac7fccdb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image_RGB<span class="ansi-blue-fg">.</span>GetDimension<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>image_RGB<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image_RGB&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2
+(128, 128)
+</pre>
 </div>
 </div>
 
@@ -14739,14 +15053,9 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-5f17447a6dff&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image_RGB<span class="ansi-blue-fg">.</span>GetNumberOfComponentsPerPixel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image_RGB&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>3
+</pre>
 </div>
 </div>
 
@@ -14760,7 +15069,7 @@ a.anchor-link {
 <p>For certain file types such as DICOM, additional information about the image is contained in the meta-data dictionary.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
@@ -14773,33 +15082,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-db2b93418c79&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> key <span class="ansi-green-fg">in</span> image<span class="ansi-blue-fg">.</span>GetMetaDataKeys<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span>         print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;\&#34;{0}\&#34;:\&#34;{1}\&#34;&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">,</span> image<span class="ansi-blue-fg">.</span>GetMetaData<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -14833,14 +15115,16 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-bcb61033a2ae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>help<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetPixel<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on method GetPixel in module SimpleITK.SimpleITK:
 
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+GetPixel(*idx) method of SimpleITK.SimpleITK.Image instance
+    Returns the value of a pixel.
+    
+    This method takes 2 parameters in 2D: the x and y index,
+    and 3 parameters in 3D: the x, y and z index.
+
+</pre>
 </div>
 </div>
 
@@ -14875,16 +15159,10 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-a2337c4c9326&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetPixel<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> image<span class="ansi-blue-fg">.</span>SetPixel<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">.</span>GetPixel<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0
+1
+</pre>
 </div>
 </div>
 
@@ -14919,16 +15197,10 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-97d6b99899d2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> image<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;image&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1
+10
+</pre>
 </div>
 </div>
 
@@ -14967,15 +15239,57 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-185b7285a644&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>nda <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetArrayFromImage<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>nda<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[[[10  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+ [[ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]
+
+ [[ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]
+
+ ...
+
+ [[ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]
+
+ [[ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]
+
+ [[ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  ...
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]
+  [ 0  0  0 ...  0  0  0]]]
+</pre>
 </div>
 </div>
 
@@ -15008,14 +15322,15 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-020722bfc41b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>help<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>GetArrayFromImage<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on function GetArrayFromImage in module SimpleITK.extra:
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+GetArrayFromImage(image)
+    Get a NumPy ndarray from a SimpleITK Image.
+    
+    This is a deep copy of the image buffer and is completely safe and without potential side effects.
+
+</pre>
 </div>
 </div>
 
@@ -15023,7 +15338,7 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
@@ -15036,33 +15351,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-ba769e678a70&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Get a view of the image data as a numpy array, useful for display</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>nda <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetArrayViewFromImage<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15089,20 +15377,15 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-acdb7e375944&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>nda <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetArrayFromImage<span class="ansi-blue-fg">(</span>image_RGB<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> img <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetImageFromArray<span class="ansi-blue-fg">(</span>nda<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> img<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(3, 128, 128)</pre>
 </div>
+
 </div>
 
 </div>
@@ -15134,14 +15417,17 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-4067f573aa5e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>help<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>GetImageFromArray<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on function GetImageFromArray in module SimpleITK.extra:
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+GetImageFromArray(arr, isVector=None)
+    Get a SimpleITK Image from a numpy array.
+    
+    If isVector is True, then the Image will have a Vector pixel type, and the last dimension of the array will be
+    considered the component index. By default when isVector is None, 4D arrays
+    are automatically considered 3D vector images, but 3D arrays are 3D images.
+
+</pre>
 </div>
 </div>
 
@@ -15175,15 +15461,69 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-230564396b9c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>img <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetImageFromArray<span class="ansi-blue-fg">(</span>nda<span class="ansi-blue-fg">,</span> isVector<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">)</span>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>VectorImage (0x56331dc38a40)
+  RTTI typeinfo:   itk::VectorImage&lt;unsigned char, 2u&gt;
+  Reference Count: 1
+  Modified Time: 690
+  Debug: Off
+  Object Name: 
+  Observers: 
+    none
+  Source: (none)
+  Source output name: (none)
+  Release Data: Off
+  Data Released: False
+  Global Release Data: Off
+  PipelineMTime: 0
+  UpdateMTime: 0
+  RealTimeStamp: 0 seconds 
+  LargestPossibleRegion: 
+    Dimension: 2
+    Index: [0, 0]
+    Size: [128, 128]
+  BufferedRegion: 
+    Dimension: 2
+    Index: [0, 0]
+    Size: [128, 128]
+  RequestedRegion: 
+    Dimension: 2
+    Index: [0, 0]
+    Size: [128, 128]
+  Spacing: [1, 1]
+  Origin: [0, 0]
+  Direction: 
+1 0
+0 1
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+  IndexToPointMatrix: 
+1 0
+0 1
+
+  PointToIndexMatrix: 
+1 0
+0 1
+
+  Inverse Direction: 
+1 0
+0 1
+
+  VectorLength: 3
+  PixelContainer: 
+    ImportImageContainer (0x56331ec94840)
+      RTTI typeinfo:   itk::ImportImageContainer&lt;unsigned long, unsigned char&gt;
+      Reference Count: 1
+      Modified Time: 691
+      Debug: Off
+      Object Name: 
+      Observers: 
+        none
+      Pointer: 0x56331ec948a0
+      Container manages memory: true
+      Size: 49152
+      Capacity: 49152
+
+</pre>
 </div>
 </div>
 
@@ -15237,18 +15577,12 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-9f8befe6e72f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> multi_channel_3Dimage <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkVectorFloat32<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> x <span class="ansi-blue-fg">=</span> multi_channel_3Dimage<span class="ansi-blue-fg">.</span>GetWidth<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> y <span class="ansi-blue-fg">=</span> multi_channel_3Dimage<span class="ansi-blue-fg">.</span>GetHeight<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">1</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;numpy&#39;</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Image size: (2, 4, 8)
+Numpy array size: (8, 4, 2, 5)
+First channel value in image: 0.18181291222572327
+First channel value in numpy array: 0.18181291
+</pre>
 </div>
 </div>
 
@@ -15290,11 +15624,19 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-1-551e5a6e0bae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
+
+<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
+sitk::ERROR: No ImageJ/Fiji application found.</pre>
 </div>
 </div>
 
@@ -15302,7 +15644,7 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
@@ -15316,34 +15658,13 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Object `sitk.Show` not found.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>By converting into a numpy array, matplotlib can be used for visualization for integration into the scientific python environment.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
@@ -15356,70 +15677,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-033ff7115bce&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2324</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_local_scope<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2325</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2326</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2327</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2328</span> 
-
-<span class="ansi-green-fg">&lt;decorator-gen-101&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">.</span>lower<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> 
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3491</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">   3492</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
-<span class="ansi-green-fg">-&gt; 3493</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3494</span> 
-<span class="ansi-green-intense-fg ansi-bold">   3495</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
-<span class="ansi-green-intense-fg ansi-bold">    278</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    279</span> 
-<span class="ansi-green-fg">--&gt; 280</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
-<span class="ansi-green-intense-fg ansi-bold">    281</span> 
-<span class="ansi-green-intense-fg ansi-bold">    282</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15446,20 +15703,31 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;matplotlib.image.AxesImage at 0x7f594f462670&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-3cc6455b1ade&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> z <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>slice <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetArrayViewFromImage<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span>z<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>slice<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
+
 </div>
 
 </div>
