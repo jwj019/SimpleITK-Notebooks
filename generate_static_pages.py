@@ -18,7 +18,7 @@ if not os.path.exists(html_dir):
 os.chdir(html_dir)
 for notebook in notebooks: 
     os.system ("python3 -m jupyter nbconvert \
-        --ExecutePreprocessor.timeout=600 \
+        --ExecutePreprocessor.timeout=6000 \
         --ExecutePreprocessor.kernel_name=python3 \
         --ExecutePreprocessor.allow_errors=True \
         --output-dir=%s \
