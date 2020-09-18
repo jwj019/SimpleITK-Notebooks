@@ -21,7 +21,16 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- Python/
         git checkout origin/${GITHUB_REF##*/} -- generate_static_pages.py
         git checkout origin/${GITHUB_REF##*/} -- requirements_dev.txt
+        git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git reset HEAD
+    - uses: actions/cache@v2
+      with:
+        path: |
+          Data
+        key: notebook-data-{{ checksum "Data/manifest.json" }}
+        restore-keys: |
+          notebook-data-{{ checksum "Data/manifest.json" }}
+          notebook-data-
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -39,7 +48,7 @@ jobs:
       env: 
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
-        python3 generate_static_pages.py
+        ~/sitkpy/bin/python3 generate_static_pages.py
     - name: Commit and push files
       run: |
         git branch
