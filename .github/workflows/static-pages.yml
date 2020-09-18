@@ -20,6 +20,7 @@ jobs:
         git fetch --all
         git checkout origin/master -- Python/
         git checkout origin/master -- generate_static_pages.py
+        git checkout origin/master -- requirements_dev.txt
         git reset HEAD
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
