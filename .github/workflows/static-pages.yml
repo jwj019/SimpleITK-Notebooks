@@ -24,7 +24,8 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git checkout origin/${GITHUB_REF##*/} -- Utilities
         git reset HEAD
-        cat generate_static_pages.py
+        cp Python/*.png Python_html
+        cp Python/*.svg Python_html
     - uses: actions/cache@v2
       with:
         path: |
@@ -57,7 +58,6 @@ jobs:
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
         source ~/sitkpy/bin/activate
-        which python3
         ~/sitkpy/bin/python3 generate_static_pages.py
     - name: Commit and push files
       run: |
