@@ -24,6 +24,7 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git checkout origin/${GITHUB_REF##*/} -- Utilities
         git reset HEAD
+        cat generate_static_pages
     - uses: actions/cache@v2
       with:
         path: |
