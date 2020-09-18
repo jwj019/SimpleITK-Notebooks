@@ -24,8 +24,6 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git checkout origin/${GITHUB_REF##*/} -- Utilities
         git reset HEAD
-        cp Python/*.png Python_html
-        cp Python/*.svg Python_html
     - uses: actions/cache@v2
       with:
         path: |
@@ -59,6 +57,10 @@ jobs:
       run: |
         source ~/sitkpy/bin/activate
         ~/sitkpy/bin/python3 generate_static_pages.py
+    - name: Copy image files
+      run: |
+        cp Python/*.png Python_html
+        cp Python/*.svg Python_html
     - name: Commit and push files
       run: |
         git branch
