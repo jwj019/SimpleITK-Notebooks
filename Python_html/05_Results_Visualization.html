@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>05_Results_Visualization</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14264,10 +14264,10 @@ a.anchor-link {
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
@@ -14312,6 +14312,73 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-d60ec21a1545&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;notebook&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2324</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_local_scope<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2325</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2326</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2327</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2328</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-101&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">.</span>lower<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    101</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3491</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">   3492</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
+<span class="ansi-green-fg">-&gt; 3493</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3494</span> 
+<span class="ansi-green-intense-fg ansi-bold">   3495</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
+<span class="ansi-green-intense-fg ansi-bold">    278</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    279</span> 
+<span class="ansi-green-fg">--&gt; 280</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
+<span class="ansi-green-intense-fg ansi-bold">    281</span> 
+<span class="ansi-green-intense-fg ansi-bold">    282</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14324,10 +14391,10 @@ a.anchor-link {
 <p>We will start by loading two images whose content luckily overlaps in physical space. Before we can combine the two, we need to resample one of them so that they both occupy the same spatial region. In addition we should also rescale the intensities so that they occupy the same range. In our case we will map them to [0,255], based on the desired windowing.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">img1</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">ReadImage</span><span class="p">(</span><span class="n">fdata</span><span class="p">(</span><span class="s2">&quot;training_001_mr_T1.mha&quot;</span><span class="p">))</span>
@@ -14348,10 +14415,40 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-a8d5f348379b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>img1 <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_mr_T1.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> img2_original <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_ct.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> img2 <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Resample<span class="ansi-blue-fg">(</span>img2_original<span class="ansi-blue-fg">,</span> img1<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># Obtain foreground masks for the two images using Otsu thresholding, we use these later on.</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Having identified the desired intensity range for each of the </span>
@@ -14366,6 +14463,36 @@ a.anchor-link {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-41c8f3190e4b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># images using the GUI above, we use these values to perform intensity windowing and map the intensity values</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># to [0,255] and cast to 8-bit unsigned int</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> img1_255 = sitk.Cast(sitk.IntensityWindowing(img1, windowMinimum=2, windowMaximum=657, 
+</span><span class="ansi-green-intense-fg ansi-bold">      5</span>                                              outputMinimum=0.0, outputMaximum=255.0), sitk.sitkUInt8)
+<span class="ansi-green-intense-fg ansi-bold">      6</span> img2_255 = sitk.Cast(sitk.IntensityWindowing(img2, windowMinimum=-1018, windowMaximum=1126, 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14383,7 +14510,7 @@ $$</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mask_image_multiply</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">image</span><span class="p">):</span>
@@ -14442,10 +14569,10 @@ $$</p>
 <p>We now create 3D images using all four combinations of alpha-blending and masks. As we are working with a 3D image and we want to save it as a figure for use in a manuscript, we will create a 2D montage image using the axial slices from the volumes.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine the two volumes</span>
@@ -14478,6 +14605,36 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-622b7f012af6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Combine the two volumes</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> images_list = [(alpha_blend(img1_255, img2_255), &#39;alpha_blend_standard&#39;), 
+</span><span class="ansi-green-intense-fg ansi-bold">      3</span>                <span class="ansi-blue-fg">(</span>alpha_blend<span class="ansi-blue-fg">(</span>img1_255<span class="ansi-blue-fg">,</span> img2_255<span class="ansi-blue-fg">,</span> mask1<span class="ansi-blue-fg">=</span>msk1<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;alpha_blend_mask1&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                <span class="ansi-blue-fg">(</span>alpha_blend<span class="ansi-blue-fg">(</span>img1_255<span class="ansi-blue-fg">,</span> img2_255<span class="ansi-blue-fg">,</span> mask2<span class="ansi-blue-fg">=</span>msk2<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;alpha_blend_mask2&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>                (alpha_blend(img1_255, img2_255, mask1=msk1, mask2=msk2),&#39;alpha_blend_mask1_mask2&#39;)]
+
+<span class="ansi-red-fg">NameError</span>: name &#39;img1_255&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14485,10 +14642,10 @@ $$</p>
 <p>You can specify the number of checkerboard tiles per dimension as illustrated below. The actual number of checkerboard tiles depends on the number of pixels per dimension and the specified number of tiles. You may get more tiles than specified, for example try specifying [4,4,7] below.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gui</span><span class="o">.</span><span class="n">MultiImageDisplay</span><span class="p">(</span><span class="n">image_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">sitk</span><span class="o">.</span><span class="n">CheckerBoard</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span> <span class="n">img2</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span> <span class="n">sitk</span><span class="o">.</span><span class="n">CheckerBoard</span><span class="p">(</span><span class="n">img1_255</span><span class="p">,</span> <span class="n">img2_255</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))],</span>
@@ -14501,6 +14658,34 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-c6fe407495ab&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> gui.MultiImageDisplay(image_list = [sitk.CheckerBoard(img1, img2, [4,4,4]), sitk.CheckerBoard(img1_255, img2_255, (10,10,4))],
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                       title_list <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;original intensities&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;rescaled intensities&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                       figure_size=(9,3));
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gui&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14508,10 +14693,10 @@ $$</p>
 <p>M. Geissbuehler, T. Lasser, "How to display data by color schemes compatible with red-green color perception deficiencies", Opt Express., 21(8):9862-74, 2013.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">zeros</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">img1_255</span><span class="o">.</span><span class="n">GetSize</span><span class="p">(),</span> <span class="n">img1_255</span><span class="o">.</span><span class="n">GetPixelID</span><span class="p">())</span>
@@ -14529,6 +14714,36 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-bc24f4f70928&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>zeros <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Image<span class="ansi-blue-fg">(</span>img1_255<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> img1_255<span class="ansi-blue-fg">.</span>GetPixelID<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> zeros<span class="ansi-blue-fg">.</span>CopyInformation<span class="ansi-blue-fg">(</span>img1_255<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span> gui.MultiImageDisplay(image_list = [sitk.Cast(sitk.Compose(img1_255, img2_255, zeros), sitk.sitkVectorUInt8),
+<span class="ansi-green-intense-fg ansi-bold">      5</span>                                     sitk<span class="ansi-blue-fg">.</span>Cast<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>Compose<span class="ansi-blue-fg">(</span>img1_255<span class="ansi-blue-fg">,</span> img2_255<span class="ansi-blue-fg">,</span> img1_255<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkVectorUInt8<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14541,10 +14756,10 @@ $$</p>
 </ol>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a signed distance map which we will overlay onto the original image using </span>
@@ -14604,6 +14819,36 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-5aa7a578d6ae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Create a signed distance map which we will overlay onto the original image using</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># pseudo-coloring. We are only interested in locations that are at a distance of [0,512] from the object</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>distance_map <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>SignedMaurerDistanceMap<span class="ansi-blue-fg">(</span>msk1<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Get binary region of interest mask.</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> roi <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Cast<span class="ansi-blue-fg">(</span>distance_map<span class="ansi-blue-fg">&gt;</span><span class="ansi-cyan-fg">0.0</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span>sitk<span class="ansi-blue-fg">.</span>Cast<span class="ansi-blue-fg">(</span>distance_map<span class="ansi-blue-fg">&lt;</span><span class="ansi-cyan-fg">512.0</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14617,10 +14862,10 @@ $$</p>
 <p>J. Vandemeulebroucke, D. Sarrut, P. Clarysse, "The POPI-model, a point-validated pixel-based breathing thorax model", Proc. XVth International Conference on the Use of Computers in Radiation Therapy (ICCR), Toronto, Canada, 2007.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load utilities that are specific to the POPI data, the label values associated with the segmentation.</span>
@@ -14639,16 +14884,67 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">~/work/SimpleITK-Notebooks/SimpleITK-Notebooks/Python/popi_utilities_setup.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
+<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-dbd669dec871&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;run&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;popi_utilities_setup.py&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>img <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;POPI/meta/00-P.mhd&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> segmentation <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;POPI/masks/00-air-body-lungs.mhd&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We will work with the central coronal slice from this dataset.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Identify the desired intensity range for our image using the GUI above, mapping the high dynamic range</span>
@@ -14668,6 +14964,36 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-70d219d9e947&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Identify the desired intensity range for our image using the GUI above, mapping the high dynamic range</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># image to a low dynamic range, [0,255], extract the central coronal slice and we flip it for display purposes.</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> coronal_255 = sitk.Cast(sitk.IntensityWindowing(img[:,int(img.GetHeight()/2),:][:,::-1], 
+</span><span class="ansi-green-intense-fg ansi-bold">      4</span>                                                 windowMinimum<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">,</span> windowMaximum<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">170</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>                                                 outputMinimum=0.0, outputMaximum=255.0), sitk.sitkUInt8)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14676,10 +15002,10 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 <p>In theory we could map these intensities to [0,255] and save the image. In practice we may have more than 256 labels and therefor it is preferable to map the labels to colors and save the color image.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use the default color map when mapping labels to colors and write the image.</span>
@@ -14691,6 +15017,33 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-0e0a95c3acd0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Use the default color map when mapping labels to colors and write the image.</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>WriteImage<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>LabelToRGB<span class="ansi-blue-fg">(</span>coronal_segmentation_isotropic<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>OUTPUT_DIR<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;coronal_segmentation.png&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14698,10 +15051,10 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 <p>The color map in SimpleITK is a set of values in the RGB color space strung together. For example [255, 0, 0, 0, 255, 0] is a two entry color map with red and green. To create a human readable color map, use lists to represent the colors and string them together, as done below.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Overlay the segmentation using default color map and an alpha value of 0.5</span>
@@ -14730,6 +15083,36 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-aa4baef4add7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Overlay the segmentation using default color map and an alpha value of 0.5</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> coronal_combined1 = sitk.LabelOverlay(image=coronal_255_isotropic, 
+</span><span class="ansi-green-intense-fg ansi-bold">      3</span>                                      labelImage<span class="ansi-blue-fg">=</span>coronal_segmentation_isotropic<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                                      opacity=0.5, backgroundValue=air_label)
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14741,10 +15124,10 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 </ol>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">red</span> <span class="o">=</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -14764,6 +15147,36 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-0c24b23a2ce0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># red goes to the first label, green to second, blue to third</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-red-fg"># body_label=0, air_label=1, lung_label=2</span>
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> contour_image = sitk.LabelToRGB(sitk.LabelContour(segmentation, fullyConnected=True, backgroundValue=255), 
+</span><span class="ansi-green-intense-fg ansi-bold">      8</span>                                 colormap=red+green+blue , backgroundValue=255)
+<span class="ansi-green-intense-fg ansi-bold">      9</span> gui.MultiImageDisplay(image_list = [contour_image],                   
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14771,10 +15184,10 @@ label image are 0,1,2. You can see the values if you hover your cursor over the 
 We can also set several visualization related parameters such as overlay opacity, contour thickness, priority of overlay (which label overwrites which if they overlap) etc.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">contour_overlaid_image</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">LabelMapContourOverlay</span><span class="p">(</span><span class="n">sitk</span><span class="o">.</span><span class="n">Cast</span><span class="p">(</span><span class="n">coronal_segmentation_isotropic</span><span class="p">,</span> <span class="n">sitk</span><span class="o">.</span><span class="n">sitkLabelUInt8</span><span class="p">),</span> 
@@ -14791,6 +15204,36 @@ We can also set several visualization related parameters such as overlay opacity
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-37e6f5a10b1b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> contour_overlaid_image = sitk.LabelMapContourOverlay(sitk.Cast(coronal_segmentation_isotropic, sitk.sitkLabelUInt8), 
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                                      coronal_255_isotropic<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                                                      opacity <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                                                      contourThickness<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>                                                      dilationRadius<span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14798,10 +15241,10 @@ We can also set several visualization related parameters such as overlay opacity
 <p>The following cell modifies our original coronal segmentation by dilating the body region in the top half of the image and dilating the lung region in the bottom half of the image.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">binary_dilate_filter</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">BinaryDilateImageFilter</span><span class="p">()</span>
@@ -14828,16 +15271,46 @@ We can also set several visualization related parameters such as overlay opacity
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-d4160532623c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>binary_dilate_filter <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>BinaryDilateImageFilter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> binary_dilate_filter<span class="ansi-blue-fg">.</span>SetKernelRadius<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> mid_size <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>coronal_segmentation_isotropic<span class="ansi-blue-fg">.</span>GetHeight<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># Over-segment the body region on the upper image region.</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>To see where the two segmentations differ, we directly compare them. If we don't want to waste ink, we can invert the result so that black pixels are the foreground and white the background.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff_image</span> <span class="o">=</span> <span class="p">(</span><span class="n">coronal_segmentation_isotropic</span><span class="o">!=</span><span class="n">modified_segmentation</span><span class="p">)</span>
@@ -14848,6 +15321,34 @@ We can also set several visualization related parameters such as overlay opacity
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-bb99044a02ac&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>diff_image <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>coronal_segmentation_isotropic<span class="ansi-blue-fg">!=</span>modified_segmentation<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> sitk<span class="ansi-blue-fg">.</span>WriteImage<span class="ansi-blue-fg">(</span>diff_image<span class="ansi-blue-fg">*</span><span class="ansi-cyan-fg">255</span><span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>OUTPUT_DIR<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;segmentation_differences.jpg&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> sitk<span class="ansi-blue-fg">.</span>WriteImage<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>diff_image<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span><span class="ansi-cyan-fg">255</span><span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>OUTPUT_DIR<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;segmentation_differences_inverted.jpg&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;coronal_segmentation_isotropic&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>

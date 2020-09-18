@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>62_Registration_Tuning</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14255,10 +14255,10 @@ a.anchor-link {
 </ul><p>We will be using the training data from the  Retrospective Image Registration Evaluation (<a href="http://www.insight-journal.org/rire/">RIRE</a>) project.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">SimpleITK</span> <span class="k">as</span> <span class="nn">sitk</span>
@@ -14281,15 +14281,45 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-8b7fd8db8793&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># Utility method that either downloads data from the network or</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># if already downloaded returns the file name for reading from disk (cached data).</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;run&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;update_path_to_download_script&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Read-the-RIRE-data-and-generate-a-larger-point-set-as-a-reference">Read the RIRE data and generate a larger point set as a reference<a class="anchor-link" href="#Read-the-RIRE-data-and-generate-a-larger-point-set-as-a-reference">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fixed_image</span> <span class="o">=</span>  <span class="n">sitk</span><span class="o">.</span><span class="n">ReadImage</span><span class="p">(</span><span class="n">fdata</span><span class="p">(</span><span class="s2">&quot;training_001_ct.mha&quot;</span><span class="p">),</span> <span class="n">sitk</span><span class="o">.</span><span class="n">sitkFloat32</span><span class="p">)</span>
@@ -14319,16 +14349,46 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-c9fbfa2d0e73&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fixed_image <span class="ansi-blue-fg">=</span>  sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_ct.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> moving_image <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_mr_T1.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> fixed_fiducial_points<span class="ansi-blue-fg">,</span> moving_fiducial_points <span class="ansi-blue-fg">=</span> ru<span class="ansi-blue-fg">.</span>load_RIRE_ground_truth<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;ct_T1.standard&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># Estimate the reference_transform defined by the RIRE fiducials and check that the FRE makes sense (low)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Initial-Alignment">Initial Alignment<a class="anchor-link" href="#Initial-Alignment">&#182;</a></h3><p>We use the CenteredTransformInitializer. Should we use the GEOMETRY based version or the MOMENTS based one?</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_transform</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">CenteredTransformInitializer</span><span class="p">(</span><span class="n">sitk</span><span class="o">.</span><span class="n">Cast</span><span class="p">(</span><span class="n">fixed_image</span><span class="p">,</span><span class="n">moving_image</span><span class="o">.</span><span class="n">GetPixelID</span><span class="p">()),</span> 
@@ -14343,6 +14403,36 @@ a.anchor-link {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-2af2be4882f9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> initial_transform = sitk.CenteredTransformInitializer(sitk.Cast(fixed_image,moving_image.GetPixelID()), 
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                                       moving_image<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                                                       sitk<span class="ansi-blue-fg">.</span>Euler3DTransform<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                                                       sitk.CenteredTransformInitializerFilter.GEOMETRY)
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14368,10 +14458,10 @@ a.anchor-link {
 <p>Finally, we are also interested in timing our registration. IPython allows us to do this with minimal effort using the <a href="http://ipython.org/ipython-doc/stable/interactive/magics.html?highlight=timeit#magic-timeit">timeit</a> cell magic (IPython has a set of predefined functions that use a command line syntax, and are referred to as magic functions).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#%%timeit -r1 -n1</span>
@@ -14410,16 +14500,46 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-a2800b880483&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg">#results from multiple runs you will have to modify the code to save them instead of just printing them out.</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>registration_method <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ImageRegistrationMethod<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> registration_method<span class="ansi-blue-fg">.</span>SetMetricAsMattesMutualInformation<span class="ansi-blue-fg">(</span>numberOfHistogramBins<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> registration_method<span class="ansi-blue-fg">.</span>SetMetricSamplingStrategy<span class="ansi-blue-fg">(</span>registration_method<span class="ansi-blue-fg">.</span>RANDOM<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In some cases visual comparison of the registration errors using the same scale is not informative, as seen above [all points are gray/black]. We therefor set the color scale to the min-max error range found in the current data and not the range from the previous stage.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_errors_mean</span><span class="p">,</span> <span class="n">final_errors_std</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">final_errors_max</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">ru</span><span class="o">.</span><span class="n">registration_errors</span><span class="p">(</span><span class="n">final_transform_single_scale</span><span class="p">,</span> <span class="n">fixed_points</span><span class="p">,</span> <span class="n">moving_points</span><span class="p">,</span> <span class="n">display_errors</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -14430,6 +14550,32 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-cd3e0b9a193b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>final_errors_mean<span class="ansi-blue-fg">,</span> final_errors_std<span class="ansi-blue-fg">,</span> _<span class="ansi-blue-fg">,</span> final_errors_max<span class="ansi-blue-fg">,</span>_ <span class="ansi-blue-fg">=</span> ru<span class="ansi-blue-fg">.</span>registration_errors<span class="ansi-blue-fg">(</span>final_transform_single_scale<span class="ansi-blue-fg">,</span> fixed_points<span class="ansi-blue-fg">,</span> moving_points<span class="ansi-blue-fg">,</span> display_errors<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;ru&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14438,10 +14584,10 @@ a.anchor-link {
 <p>The example below shows that registration is improving even though the similarity value increases when changing resolution levels.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#%%timeit -r1 -n1</span>
@@ -14484,6 +14630,36 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-f5d6eb6a28cb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg">#results from multiple runs you will have to modify the code to save them instead of just printing them out.</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>registration_method <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ImageRegistrationMethod<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> registration_method<span class="ansi-blue-fg">.</span>SetMetricAsMattesMutualInformation<span class="ansi-blue-fg">(</span>numberOfHistogramBins<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> registration_method<span class="ansi-blue-fg">.</span>SetMetricSamplingStrategy<span class="ansi-blue-fg">(</span>registration_method<span class="ansi-blue-fg">.</span>RANDOM<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14491,10 +14667,10 @@ a.anchor-link {
 <p>To see the difference you will have to <b>comment out the timeit magic in the code above</b>, run it again, and then run the following cell.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Threshold the original fixed, CT, image at 0HU (water), resulting in a binary labeled [0,1] image.</span>
@@ -14528,6 +14704,36 @@ a.anchor-link {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-af7c5acd8fa4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Threshold the original fixed, CT, image at 0HU (water), resulting in a binary labeled [0,1] image.</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>roi <span class="ansi-blue-fg">=</span> fixed_image<span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Our ROI consists of all voxels with a value of 1, now get the bounding box surrounding the head.</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> label_shape_analysis <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>LabelShapeStatisticsImageFilter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;fixed_image&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">

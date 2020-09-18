@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>64_Registration_Memory_Time_Tradeoff</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14260,10 +14260,10 @@ a.anchor-link {
 <p><font size="-1">*A better approach is to use single image super resolution techniques such as the one described in A. Rueda, N. Malpica, E. Romero,"Single-image super-resolution of brain MR images using overcomplete dictionaries", <i>Med Image Anal.</i>, 17(1):113-132, 2013.</font></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -14305,6 +14305,36 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-58eae5d4d35b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> __future__ <span class="ansi-green-fg">import</span> print_function
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14312,10 +14342,10 @@ a.anchor-link {
 <p>The RIRE reference, ground truth, data consists of a set of corresponding points in the fixed and moving coordinate systems. These points were obtained from fiducials embedded in the patient's skull and are thus sparse (eight points). We use these to compute the rigid transformation between the two coordinate systems, and then generate a dense reference. This generated reference data is more similar to the data you would use for registration evaluation.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fixed_image</span> <span class="o">=</span>  <span class="n">sitk</span><span class="o">.</span><span class="n">ReadImage</span><span class="p">(</span><span class="n">fdata</span><span class="p">(</span><span class="s2">&quot;training_001_ct.mha&quot;</span><span class="p">),</span> <span class="n">sitk</span><span class="o">.</span><span class="n">sitkFloat32</span><span class="p">)</span>
@@ -14343,16 +14373,46 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-3ef7c48d5b61&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fixed_image <span class="ansi-blue-fg">=</span>  sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_ct.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> moving_image <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;training_001_mr_T1.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sitk<span class="ansi-blue-fg">.</span>sitkFloat32<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> fixed_fiducial_points<span class="ansi-blue-fg">,</span> moving_fiducial_points <span class="ansi-blue-fg">=</span> ru<span class="ansi-blue-fg">.</span>load_RIRE_ground_truth<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;ct_T1.standard&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> R<span class="ansi-blue-fg">,</span> t <span class="ansi-blue-fg">=</span> ru<span class="ansi-blue-fg">.</span>absolute_orientation_m<span class="ansi-blue-fg">(</span>fixed_fiducial_points<span class="ansi-blue-fg">,</span> moving_fiducial_points<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Invest-time-and-memory-in-exchange-for-future-time-savings">Invest time and memory in exchange for future time savings<a class="anchor-link" href="#Invest-time-and-memory-in-exchange-for-future-time-savings">&#182;</a></h2><p>We now resample our moving image to a finer spatial resolution.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Isotropic voxels with 1mm spacing.</span>
@@ -14386,6 +14446,36 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-9244dcdb3eef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Isotropic voxels with 1mm spacing.</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>new_spacing <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1.0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">*</span>moving_image<span class="ansi-blue-fg">.</span>GetDimension<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Create resampled image using new spacing and size.</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> original_size <span class="ansi-blue-fg">=</span> moving_image<span class="ansi-blue-fg">.</span>GetSize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;moving_image&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14403,10 +14493,10 @@ On the other hand this requires less effort from the developer, a single line of
 <h2 id="Registration">Registration<a class="anchor-link" href="#Registration">&#182;</a></h2><h3 id="Initial-Alignment">Initial Alignment<a class="anchor-link" href="#Initial-Alignment">&#182;</a></h3><p>We will use the same initial alignment for both registrations.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">initial_transform</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">CenteredTransformInitializer</span><span class="p">(</span><span class="n">fixed_image</span><span class="p">,</span> 
@@ -14420,16 +14510,45 @@ On the other hand this requires less effort from the developer, a single line of
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-7e0f30c31dde&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> initial_transform = sitk.CenteredTransformInitializer(fixed_image, 
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                                       moving_image<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                                                       sitk<span class="ansi-blue-fg">.</span>Euler3DTransform<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                                                       sitk.CenteredTransformInitializerFilter.GEOMETRY)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Original-Resolution">Original Resolution<a class="anchor-link" href="#Original-Resolution">&#182;</a></h3><p>For this registration we use the original resolution and linear interpolation.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -r1 -n1
@@ -14451,16 +14570,81 @@ On the other hand this requires less effort from the developer, a single line of
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-82e577975f0e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;-r1 -n1&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;# The arguments to the timeit magic specify that this cell should only be run once. \n\n# We define this variable as global so that it is accessible outside of the cell (timeit wraps the code in the cell\n# making all variables local, unless explicitly declared global).\nglobal original_resolution_errors\n\nfinal_transform, optimizer_termination = register_images(fixed_image, moving_image, initial_transform, sitk.sitkLinear)\nfinal_errors_mean, final_errors_std, _, final_errors_max, original_resolution_errors = ru.registration_errors(final_transform, fixed_points, moving_points)\n\nprint(optimizer_termination)\nprint(&#39;After registration, errors in millimeters, mean(std): {:.2f}({:.2f}), max: {:.2f}&#39;.format(final_errors_mean, final_errors_std, final_errors_max))\n&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-53&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1171</span>                     <span class="ansi-green-fg">break</span>
+<span class="ansi-green-intense-fg ansi-bold">   1172</span> 
+<span class="ansi-green-fg">-&gt; 1173</span><span class="ansi-red-fg">         </span>all_runs <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>repeat<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">,</span> number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1174</span>         best <span class="ansi-blue-fg">=</span> min<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+<span class="ansi-green-intense-fg ansi-bold">   1175</span>         worst <span class="ansi-blue-fg">=</span> max<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/timeit.py</span> in <span class="ansi-cyan-fg">repeat</span><span class="ansi-blue-fg">(self, repeat, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>         r <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    204</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 205</span><span class="ansi-red-fg">             </span>t <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>             r<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span>         <span class="ansi-green-fg">return</span> r
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;register_images&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Higher-Resolution">Higher Resolution<a class="anchor-link" href="#Higher-Resolution">&#182;</a></h3><p>For this registration we use the higher resolution image and nearest neighbor interpolation.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -r1 -n1
@@ -14482,6 +14666,71 @@ On the other hand this requires less effort from the developer, a single line of
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-77af1a606212&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;-r1 -n1&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;# The arguments to the timeit magic specify that this cell should only be run once. \n\n# We define this variable as global so that it is accessible outside of the cell (timeit wraps the code in the cell\n# making all variables local, unless explicitly declared global).\nglobal resampled_resolution_errors \n\nfinal_transform, optimizer_termination = register_images(fixed_image, resampled_moving_image, initial_transform, sitk.sitkNearestNeighbor)\nfinal_errors_mean, final_errors_std, _, final_errors_max, resampled_resolution_errors = ru.registration_errors(final_transform, fixed_points, moving_points)\n\nprint(optimizer_termination)\nprint(&#39;After registration, errors in millimeters, mean(std): {:.2f}({:.2f}), max: {:.2f}&#39;.format(final_errors_mean, final_errors_std, final_errors_max))\n&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-53&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1171</span>                     <span class="ansi-green-fg">break</span>
+<span class="ansi-green-intense-fg ansi-bold">   1172</span> 
+<span class="ansi-green-fg">-&gt; 1173</span><span class="ansi-red-fg">         </span>all_runs <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>repeat<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">,</span> number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1174</span>         best <span class="ansi-blue-fg">=</span> min<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+<span class="ansi-green-intense-fg ansi-bold">   1175</span>         worst <span class="ansi-blue-fg">=</span> max<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/timeit.py</span> in <span class="ansi-cyan-fg">repeat</span><span class="ansi-blue-fg">(self, repeat, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>         r <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    204</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 205</span><span class="ansi-red-fg">             </span>t <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>             r<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span>         <span class="ansi-green-fg">return</span> r
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;register_images&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14489,10 +14738,10 @@ On the other hand this requires less effort from the developer, a single line of
 error distributions (plotted below).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">original_resolution_errors</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;original resolution&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
@@ -14504,6 +14753,35 @@ error distributions (plotted below).</p>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-b8f4da3d6ef2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>hist<span class="ansi-blue-fg">(</span>original_resolution_errors<span class="ansi-blue-fg">,</span> bins<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> alpha<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.5</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;original resolution&#39;</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;blue&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>hist<span class="ansi-blue-fg">(</span>resampled_resolution_errors<span class="ansi-blue-fg">,</span> bins<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> alpha<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.5</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;higher resolution&#39;</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;green&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>legend<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;TRE histogram&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>

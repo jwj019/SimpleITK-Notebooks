@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>51_VH_Segmentation1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14240,10 +14240,10 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -14263,10 +14263,77 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-1037b6c59565&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> __future__ <span class="ansi-green-fg">import</span> print_function
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2324</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_local_scope<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2325</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2326</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2327</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2328</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-101&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">.</span>lower<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    101</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3491</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">   3492</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
+<span class="ansi-green-fg">-&gt; 3493</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3494</span> 
+<span class="ansi-green-intense-fg ansi-bold">   3495</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
+<span class="ansi-green-intense-fg ansi-bold">    278</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    279</span> 
+<span class="ansi-green-fg">--&gt; 280</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
+<span class="ansi-green-intense-fg ansi-bold">    281</span> 
+<span class="ansi-green-intense-fg ansi-bold">    282</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">ReadImage</span><span class="p">(</span><span class="n">fdata</span><span class="p">(</span><span class="s2">&quot;a_vm1108.png&quot;</span><span class="p">))</span>
@@ -14278,10 +14345,37 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-02a9e429482e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>img <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;a_vm1108.png&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> myshow<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">seeds</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span><span class="mi">800</span><span class="p">]]</span>
@@ -14293,10 +14387,37 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-a5462df3b3d6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> seeds <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">400</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">500</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1500</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">800</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>seg <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>VectorConfidenceConnected<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">,</span> seedList<span class="ansi-blue-fg">=</span>seeds<span class="ansi-blue-fg">,</span> numberOfIterations<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> multiplier<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">7</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">myshow</span><span class="p">(</span><span class="n">sitk</span><span class="o">.</span><span class="n">Mask</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="o">==</span><span class="mi">0</span><span class="p">))</span>
@@ -14307,10 +14428,36 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-4e4be8156bbf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>myshow<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>Mask<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">,</span> seg<span class="ansi-blue-fg">==</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;myshow&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">seg</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">BinaryClosingByReconstruction</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">*</span><span class="n">seg</span><span class="o">.</span><span class="n">GetDimension</span><span class="p">())</span>
@@ -14321,10 +14468,36 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-017c2cef8600&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>seg <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>BinaryClosingByReconstruction<span class="ansi-blue-fg">(</span>seg<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">*</span>seg<span class="ansi-blue-fg">.</span>GetDimension<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">myshow</span><span class="p">(</span><span class="n">sitk</span><span class="o">.</span><span class="n">Mask</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="o">==</span><span class="mi">0</span><span class="p">))</span>
@@ -14333,6 +14506,32 @@ a.anchor-link {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-4e4be8156bbf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>myshow<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>Mask<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">,</span> seg<span class="ansi-blue-fg">==</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;myshow&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>

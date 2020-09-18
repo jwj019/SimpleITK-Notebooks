@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>70_Data_Augmentation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14248,10 +14248,10 @@ a.anchor-link {
 <p>Using a model of the variations found in the general population and the existing dataset we generate additional images in the hope of capturing the population variability. Note that if the model you use is incorrect you can cause harm, you are generating observations that do not occur in the general population and are optimizing a function to fit them.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">SimpleITK</span> <span class="k">as</span> <span class="nn">sitk</span>
@@ -14273,6 +14273,36 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-0c460298467a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> SimpleITK <span class="ansi-green-fg">as</span> sitk
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;notebook&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">import</span> gui
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;SimpleITK&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14283,10 +14313,10 @@ a.anchor-link {
 A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to small image transformations?"  <a href="https://arxiv.org/abs/1805.12177">CoRR abs/1805.12177</a>, 2018.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The image we will resample (a grid).</span>
@@ -14313,16 +14343,46 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-d8abbe4c1351&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># The image we will resample (a grid).</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> grid_image = sitk.GridSource(outputPixelType=sitk.sitkUInt16, size=(512,512), 
+</span><span class="ansi-green-intense-fg ansi-bold">      3</span>                              sigma=(0.1,0.1), gridSpacing=(20.0,20.0))
+<span class="ansi-green-intense-fg ansi-bold">      4</span> sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>grid_image<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;original grid image&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Load-data">Load data<a class="anchor-link" href="#Load-data">&#182;</a></h1><p>Load the images. You can work through the notebook using either the original 3D images or 2D slices from the original volumes. To do the latter, just uncomment the line in the cell below.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">sitk</span><span class="o">.</span><span class="n">ReadImage</span><span class="p">(</span><span class="n">fdata</span><span class="p">(</span><span class="s2">&quot;nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT1.nrrd&quot;</span><span class="p">)),</span>
@@ -14338,10 +14398,40 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-1e8a74b04032&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> data = [sitk.ReadImage(fdata(&#34;nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT1.nrrd&#34;)),
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>         sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;vm_head_mri.mha&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>         sitk.ReadImage(fdata(&#34;head_mr_oriented.mha&#34;))]
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Comment out the following line if you want to work in 3D. Note that in 3D some of the notebook visualizations are</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># disabled.</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">disp_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">fig_size</span><span class="p">,</span> <span class="n">wl_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -14358,16 +14448,44 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-6eb43f26f096&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>       gui<span class="ansi-blue-fg">.</span>MultiImageDisplay<span class="ansi-blue-fg">(</span>image_list<span class="ansi-blue-fg">=</span>images<span class="ansi-blue-fg">,</span> figure_size<span class="ansi-blue-fg">=</span>fig_size<span class="ansi-blue-fg">,</span> window_level_list<span class="ansi-blue-fg">=</span>wl_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>disp_images<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> fig_size<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The original data often needs to be modified. In this example we would like to crop the images so that we only keep the informative regions. We can readily separate the foreground and background using an appropriate threshold, in our case we use Otsu's threshold selection method.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">threshold_based_crop</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
@@ -14401,16 +14519,46 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-005bc4b28323&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
+<span class="ansi-green-intense-fg ansi-bold">     21</span> 
+<span class="ansi-green-fg">---&gt; 22</span><span class="ansi-red-fg"> </span>modified_data <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>threshold_based_crop<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> img <span class="ansi-green-fg">in</span> data<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> 
+<span class="ansi-green-intense-fg ansi-bold">     24</span> disp_images<span class="ansi-blue-fg">(</span>modified_data<span class="ansi-blue-fg">,</span> fig_size<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>At this point we select the images we want to work with, skip the following cell if you want to work with the original data.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">modified_data</span>
@@ -14419,6 +14567,32 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-b9bbe55ce4b5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>data <span class="ansi-blue-fg">=</span> modified_data
+
+<span class="ansi-red-fg">NameError</span>: name &#39;modified_data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14438,7 +14612,7 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">parameter_space_regular_grid_sampling</span><span class="p">(</span><span class="o">*</span><span class="n">transformation_parameters</span><span class="p">):</span>
@@ -14563,10 +14737,10 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 <p>This domain is defined by two constraints: the number of pixels per dimension and the physical size we want the reference domain to occupy. The former is associated with the computational constraints of deep learning where using a small number of pixels is desired. The later is associated with the SimpleITK concept of an image, it occupies a  region in physical space which should be large enough to encompass the object of interest.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dimension</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">GetDimension</span><span class="p">()</span>
@@ -14611,6 +14785,36 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-b73ffd4fc5ef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>dimension <span class="ansi-blue-fg">=</span> data<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>GetDimension<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># Physical image size corresponds to the largest physical size in the training set, or any other arbitrary size.</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> reference_physical_size <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>zeros<span class="ansi-blue-fg">(</span>dimension<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">for</span> img <span class="ansi-green-fg">in</span> data<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14618,10 +14822,10 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 <p>Note that you also need to create the labels for your augmented images. If these are just classes then your processing is minimal. If you are dealing with segmentation you will also need to transform the segmentation labels so that they match the transformed image. The following function easily accommodates for this, just provide the labeled image as input and use the sitk.sitkNearestNeighbor interpolator so that you do not introduce labels that were not in the original segmentation.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">augment_images_spatial</span><span class="p">(</span><span class="n">original_image</span><span class="p">,</span> <span class="n">reference_image</span><span class="p">,</span> <span class="n">T0</span><span class="p">,</span> <span class="n">T_aug</span><span class="p">,</span> <span class="n">transformation_parameters</span><span class="p">,</span>
@@ -14664,6 +14868,36 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-b42bac6aeea4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> def augment_images_spatial(original_image, reference_image, T0, T_aug, transformation_parameters,
+<span class="ansi-green-intense-fg ansi-bold">      2</span>                     output_prefix<span class="ansi-blue-fg">,</span> output_suffix<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">                     interpolator = sitk.sitkLinear, default_intensity_value = 0.0):
+</span><span class="ansi-green-intense-fg ansi-bold">      4</span>     &#39;&#39;&#39;
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     Generate the resampled images based on the given transformations<span class="ansi-blue-fg">.</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sitk&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14672,10 +14906,10 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 <p>By default, the cell below uses random uniform sampling in the transformation parameter space (<code>similarity3D_parameter_space_random_sampling</code>). If you want to try regular sampling, uncomment the commented out code.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aug_transform</span> <span class="o">=</span> <span class="n">sitk</span><span class="o">.</span><span class="n">Similarity2DTransform</span><span class="p">()</span> <span class="k">if</span> <span class="n">dimension</span><span class="o">==</span><span class="mi">2</span> <span class="k">else</span> <span class="n">sitk</span><span class="o">.</span><span class="n">Similarity3DTransform</span><span class="p">()</span>
@@ -14737,6 +14971,36 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-52da9c9938c3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>aug_transform <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>Similarity2DTransform<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> dimension<span class="ansi-blue-fg">==</span><span class="ansi-cyan-fg">2</span> <span class="ansi-green-fg">else</span> sitk<span class="ansi-blue-fg">.</span>Similarity3DTransform<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> all_images <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">for</span> index<span class="ansi-blue-fg">,</span>img <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;dimension&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14754,10 +15018,10 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 <p>The following two cells correspond to the two approaches:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -n1 -r1
@@ -14793,10 +15057,75 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-f3bd5afd61d2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;-n1 -r1&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;# Approach 1, using an affine transformation\n\nflipped_images = []\nfor index,img in enumerate(data):\n    # Compute the transformation which maps between the reference and current image (same as done above).\n    transform = sitk.AffineTransform(dimension)\n    transform.SetMatrix(img.GetDirection())\n    transform.SetTranslation(np.array(img.GetOrigin()) - reference_origin)\n    centering_transform = sitk.TranslationTransform(dimension)\n    img_center = np.array(img.TransformContinuousIndexToPhysicalPoint(np.array(img.GetSize())/2.0))\n    centering_transform.SetOffset(np.array(transform.GetInverse().TransformPoint(img_center) - reference_center))\n    centered_transform = sitk.CompositeTransform([transform,centering_transform])\n    \n    flipped_transform = sitk.AffineTransform(dimension)    \n    flipped_transform.SetCenter(reference_image.TransformContinuousIndexToPhysicalPoint(np.array(reference_image.GetSize())/2.0))\n    if dimension==2: # matrices in SimpleITK specified in row major order\n        flipped_transform.SetMatrix([1,0,0,-1])\n    else:\n        flipped_transform.SetMatrix([1,0,0,0,-1,0,0,0,1])\n    centered_transform.AddTransform(flipped_transform)\n    \n    # Resample onto the reference image \n    flipped_images.append(sitk.Resample(img, reference_image, centered_transform, sitk.sitkLinear, 0.0))\n# Uncomment the following line to display the images (we don&#39;t want to time this)\n#disp_images(flipped_images, fig_size=(6,2))\n&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-53&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1171</span>                     <span class="ansi-green-fg">break</span>
+<span class="ansi-green-intense-fg ansi-bold">   1172</span> 
+<span class="ansi-green-fg">-&gt; 1173</span><span class="ansi-red-fg">         </span>all_runs <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>repeat<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">,</span> number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1174</span>         best <span class="ansi-blue-fg">=</span> min<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+<span class="ansi-green-intense-fg ansi-bold">   1175</span>         worst <span class="ansi-blue-fg">=</span> max<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/timeit.py</span> in <span class="ansi-cyan-fg">repeat</span><span class="ansi-blue-fg">(self, repeat, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>         r <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    204</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 205</span><span class="ansi-red-fg">             </span>t <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>             r<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span>         <span class="ansi-green-fg">return</span> r
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -n1 -r1
@@ -14829,6 +15158,71 @@ A. Azulay, Y. Weiss, "Why do deep convolutional networks generalize so poorly to
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-3fa95273a001&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;-n1 -r1&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;\n# Approach 2, flipping after resampling\n\nflipped_images = []\nfor index,img in enumerate(data):\n    # Compute the transformation which maps between the reference and current image (same as done above).\n    transform = sitk.AffineTransform(dimension)\n    transform.SetMatrix(img.GetDirection())\n    transform.SetTranslation(np.array(img.GetOrigin()) - reference_origin)\n    centering_transform = sitk.TranslationTransform(dimension)\n    img_center = np.array(img.TransformContinuousIndexToPhysicalPoint(np.array(img.GetSize())/2.0))\n    centering_transform.SetOffset(np.array(transform.GetInverse().TransformPoint(img_center) - reference_center))\n    centered_transform = sitk.CompositeTransform([transform,centering_transform])\n    # Resample onto the reference image \n    resampled_img = sitk.Resample(img, reference_image, centered_transform, sitk.sitkLinear, 0.0)\n    # We flip on the y axis (x, z are done similarly)\n    if dimension==2:\n        flipped_images.append(resampled_img[:,::-1])\n    else:\n        flipped_images.append(resampled_img[:,::-1,:])\n# Uncomment the following line to display the images (we don&#39;t want to time this)        \n#disp_images(flipped_images, fig_size=(6,2))\n&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
+
+<span class="ansi-green-fg">&lt;decorator-gen-53&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1171</span>                     <span class="ansi-green-fg">break</span>
+<span class="ansi-green-intense-fg ansi-bold">   1172</span> 
+<span class="ansi-green-fg">-&gt; 1173</span><span class="ansi-red-fg">         </span>all_runs <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>repeat<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">,</span> number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1174</span>         best <span class="ansi-blue-fg">=</span> min<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+<span class="ansi-green-intense-fg ansi-bold">   1175</span>         worst <span class="ansi-blue-fg">=</span> max<span class="ansi-blue-fg">(</span>all_runs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> number
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/timeit.py</span> in <span class="ansi-cyan-fg">repeat</span><span class="ansi-blue-fg">(self, repeat, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>         r <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    204</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>repeat<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 205</span><span class="ansi-red-fg">             </span>t <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>             r<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span>         <span class="ansi-green-fg">return</span> r
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
+<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14847,10 +15241,10 @@ $$</p>
 <p>Using SimpleITK operators we represent this transformation using a deformation field as follows:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">radial_distort</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span><span class="p">,</span> <span class="n">k3</span><span class="p">,</span> <span class="n">distortion_center</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -14888,6 +15282,36 @@ $$</p>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-4936317e29dc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     21</span> k2 <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0.0000000000001</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> k3 <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0.0000000000001</span>
+<span class="ansi-green-fg">---&gt; 23</span><span class="ansi-red-fg"> </span>original_image <span class="ansi-blue-fg">=</span> data<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> distorted_image <span class="ansi-blue-fg">=</span> radial_distort<span class="ansi-blue-fg">(</span>original_image<span class="ansi-blue-fg">,</span> k1<span class="ansi-blue-fg">,</span> k2<span class="ansi-blue-fg">,</span> k3<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span> <span class="ansi-red-fg"># Use a grid image to highlight the distortion.</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14931,7 +15355,7 @@ $$</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">augment_images_intensity</span><span class="p">(</span><span class="n">image_list</span><span class="p">,</span> <span class="n">output_prefix</span><span class="p">,</span> <span class="n">output_suffix</span><span class="p">):</span>
@@ -15003,10 +15427,10 @@ $$</p>
 <p>Modify the intensities of the original images using the set of SimpleITK filters described above. If we are working with 2D images the results will be displayed inline.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">intensity_augmented_images</span> <span class="o">=</span> <span class="n">augment_images_intensity</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OUTPUT_DIR</span><span class="p">,</span> <span class="s1">&#39;intensity_aug&#39;</span><span class="p">),</span> <span class="s1">&#39;mha&#39;</span><span class="p">)</span>
@@ -15035,6 +15459,36 @@ $$</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-9559209363ee&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>intensity_augmented_images <span class="ansi-blue-fg">=</span> augment_images_intensity<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>OUTPUT_DIR<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;intensity_aug&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;mha&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span>           <span class="ansi-red-fg"># in 2D we join all of the images into a 3D volume which we use for display.</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">if</span> dimension<span class="ansi-blue-fg">==</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">def</span> list2_float_volume<span class="ansi-blue-fg">(</span>image_list<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15044,10 +15498,10 @@ $$f(I) = (max_{output} - min_{output}) \frac{1}{1+ e^{-\frac{I-\beta}{\alpha}}} 
 <p>Where $\alpha$ is the curve steepness (the larger the $\alpha$ the steeper the slope, the smaller the $\alpha$ the closer we get to a linear mapping in the output range) and $\beta$ is the intensity value for the sigmoid midpoint.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid_mapping</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">curve_steepness</span><span class="p">,</span> <span class="n">output_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_max</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">intensity_midpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -15083,6 +15537,34 @@ $$f(I) = (max_{output} - min_{output}) \frac{1}{1+ e^{-\frac{I-\beta}{\alpha}}} 
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-fb446a444aa6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-red-fg"># Change the order of magnitude of curve steepness [1.0,0.1,0.01] to see the effect of this parameter.</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span> <span class="ansi-red-fg"># Also change it from positive to negative.</span>
+<span class="ansi-green-fg">---&gt; 26</span><span class="ansi-red-fg"> </span>disp_images<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>sigmoid_mapping<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">,</span> curve_steepness<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.01</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> img <span class="ansi-green-fg">in</span> data<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> fig_size<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15092,10 +15574,10 @@ Setting the <code>curve_steepness</code> to [1.0,0.1,0.01, -0.01, -0.1, -1.0]
 Setting the <code>intensity_midpoint</code> to [-50, 0, 50].</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -15112,6 +15594,36 @@ Setting the <code>intensity_midpoint</code> to [-50, 0, 50].</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-33b671f74a94&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg">#Create a 1D image with values in [-100,100].</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> arr_x <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>list<span class="ansi-blue-fg">(</span>range<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">101</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> image1D <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>GetImageFromArray<span class="ansi-blue-fg">(</span>arr_x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> plt<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15119,10 +15631,10 @@ Setting the <code>intensity_midpoint</code> to [-50, 0, 50].</p>
 <p>The following cell illustrates this functionality for all integer scalar SimpleITK images (2D,3D).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">histogram_equalization</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
@@ -15183,16 +15695,44 @@ Setting the <code>intensity_midpoint</code> to [-50, 0, 50].</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-3030b0e7b300&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     49</span> <span class="ansi-red-fg">#cast the images to int16 because data[0] is float32 and the histogram equalization only works</span>
+<span class="ansi-green-intense-fg ansi-bold">     50</span> <span class="ansi-red-fg">#on integer types.</span>
+<span class="ansi-green-fg">---&gt; 51</span><span class="ansi-red-fg"> </span>disp_images<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>histogram_equalization<span class="ansi-blue-fg">(</span>sitk<span class="ansi-blue-fg">.</span>Cast<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">,</span>sitk<span class="ansi-blue-fg">.</span>sitkInt16<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> img <span class="ansi-green-fg">in</span> data<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> fig_size<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Finally, you can easily create intensity variations that are specific to your domain, such as the spatially varying multiplicative and additive transformation shown below.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mult_and_add_intensity_fields</span><span class="p">(</span><span class="n">original_image</span><span class="p">):</span>
@@ -15229,6 +15769,34 @@ Setting the <code>intensity_midpoint</code> to [-50, 0, 50].</p>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-b0734e6a7a91&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     27</span>     <span class="ansi-green-fg">return</span> g_mult<span class="ansi-blue-fg">*</span>original_image<span class="ansi-blue-fg">+</span>g_add
+<span class="ansi-green-intense-fg ansi-bold">     28</span> 
+<span class="ansi-green-fg">---&gt; 29</span><span class="ansi-red-fg"> </span>disp_images<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>mult_and_add_intensity_fields<span class="ansi-blue-fg">(</span>img<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> img <span class="ansi-green-fg">in</span> data<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> fig_size<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
