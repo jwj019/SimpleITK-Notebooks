@@ -30,6 +30,8 @@ jobs:
       run: |
         pip3 install jupyter pandadocs nbconvert notebooktoall
     - name: Generate static pages
+      env: 
+        SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
         python3 generate_static_pages.py
     - name: Commit and push files
