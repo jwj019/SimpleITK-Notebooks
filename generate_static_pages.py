@@ -7,7 +7,7 @@ html_dir = os.path.abspath('./Python_html')
 for path in os.listdir(ipynb_dir):
     full_path = os.path.join(ipynb_dir, path)
     if os.path.isfile(full_path):
-        files.append(full_path)
+        files.append(full_path.replace("'", "\\'"))
 
 notebooks = [i for i in files if i.endswith('.ipynb')]
 notebooks.sort()
