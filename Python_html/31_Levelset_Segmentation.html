@@ -14299,7 +14299,7 @@ Fetching nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT2.nrrd
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
@@ -14311,40 +14311,6 @@ Fetching nac-hncma-atlas2013-Slicer4Version/Data/A1_grayT2.nrrd
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-40e56d7a2270&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>img_T1<span class="ansi-blue-fg">,</span> title<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;T1&#34;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
-
-<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
-sitk::ERROR: No ImageJ/Fiji application found.</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14442,7 +14408,7 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
   Commands: (none)
   ProgressMeasurement: 0
   ActiveProcess:
-    LabelStatisticsImageFilter (0x557979cb2c80)
+    LabelStatisticsImageFilter (0x563ffaf00870)
       RTTI typeinfo:   itk::LabelStatisticsImageFilter&lt;itk::Image&lt;float, 3u&gt;, itk::Image&lt;unsigned char, 3u&gt; &gt;
       Reference Count: 1
       Modified Time: 2602
@@ -14451,10 +14417,10 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
       Observers: 
         DeleteEvent(SimpleMemberCommand)
       Inputs: 
-        LabelInput: (0x55797910c7d0) *
-        Primary: (0x55797910bde0) *
+        LabelInput: (0x563ffa3aee50) *
+        Primary: (0x563ffa3ae460) *
       Indexed Inputs: 
-        0: Primary (0x55797910bde0)
+        0: Primary (0x563ffa3ae460)
       Required Input Names: LabelInput, Primary
       NumberOfRequiredInputs: 1
       Outputs: 
@@ -14484,7 +14450,7 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
         SingleData: 0
       Current Request Number: -1
       NumberOfStreamDivisions: 1
-      RegionSplitter: ImageRegionSplitterSlowDimension (0x5579797b86a0)
+      RegionSplitter: ImageRegionSplitterSlowDimension (0x563ffaa40e40)
   RTTI typeinfo:   itk::ImageRegionSplitterSlowDimension
   Reference Count: 2
   Modified Time: 2595

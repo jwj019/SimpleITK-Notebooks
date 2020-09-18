@@ -15462,7 +15462,7 @@ GetImageFromArray(arr, isVector=None)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>VectorImage (0x556d6624c4c0)
+<pre>VectorImage (0x56387901ea40)
   RTTI typeinfo:   itk::VectorImage&lt;unsigned char, 2u&gt;
   Reference Count: 1
   Modified Time: 690
@@ -15510,7 +15510,7 @@ GetImageFromArray(arr, isVector=None)
 
   VectorLength: 3
   PixelContainer: 
-    ImportImageContainer (0x556d66f5aac0)
+    ImportImageContainer (0x56387a07b3c0)
       RTTI typeinfo:   itk::ImportImageContainer&lt;unsigned long, unsigned char&gt;
       Reference Count: 1
       Modified Time: 691
@@ -15518,7 +15518,7 @@ GetImageFromArray(arr, isVector=None)
       Object Name: 
       Observers: 
         none
-      Pointer: 0x556d66f5ab20
+      Pointer: 0x56387a07b420
       Container manages memory: true
       Size: 49152
       Capacity: 49152
@@ -15580,8 +15580,8 @@ GetImageFromArray(arr, isVector=None)
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Image size: (2, 4, 8)
 Numpy array size: (8, 4, 2, 5)
-First channel value in image: 0.9140419960021973
-First channel value in numpy array: 0.914042
+First channel value in image: 0.9407424926757812
+First channel value in numpy array: 0.9407425
 </pre>
 </div>
 </div>
@@ -15596,7 +15596,7 @@ First channel value in numpy array: 0.914042
 <h3 id="Are-we-still-dealing-with-Image,-because-I-haven't-seen-one-yet...">Are we still dealing with Image, because I haven't seen one yet...<a class="anchor-link" href="#Are-we-still-dealing-with-Image,-because-I-haven't-seen-one-yet...">&#182;</a></h3><p>While SimpleITK does not do visualization, it does contain a built in <code>Show</code> method. This function writes the image out to disk and than launches a program for visualization. By default it is configured to use ImageJ, because it is readily supports all the image types which SimpleITK has and load very quickly. However, it's easily customizable by setting environment variables.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
@@ -15608,40 +15608,6 @@ First channel value in numpy array: 0.914042
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-551e5a6e0bae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>image<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
-
-<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
-sitk::ERROR: No ImageJ/Fiji application found.</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15709,7 +15675,7 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fa4b8010790&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f85f1324610&gt;</pre>
 </div>
 
 </div>

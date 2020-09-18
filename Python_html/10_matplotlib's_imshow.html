@@ -14304,32 +14304,6 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-c6de2e40ce3c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> img1 <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;cthead1.png&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>img1<span class="ansi-blue-fg">,</span> title<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;cthead1&#34;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
-
-<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
-sitk::ERROR: No ImageJ/Fiji application found.</pre>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14366,32 +14340,6 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-965fa556ef3c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> img2 <span class="ansi-blue-fg">=</span> sitk<span class="ansi-blue-fg">.</span>ReadImage<span class="ansi-blue-fg">(</span>fdata<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;VM1111Shrink-RGB.png&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>sitk<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span>img2<span class="ansi-blue-fg">,</span> title<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;Visible Human Head&#34;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/sitkpy/lib/python3.8/site-packages/SimpleITK/SimpleITK.py</span> in <span class="ansi-cyan-fg">Show</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5423</span> <span class="ansi-green-fg">def</span> Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5424</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Show(Image image, std::string const &amp; title=&#34;&#34;, bool const debugOn=itk::simple::ProcessObject::GetGlobalDefaultDebug())&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">-&gt; 5425</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _SimpleITK<span class="ansi-blue-fg">.</span>Show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5426</span> <span class="ansi-green-fg">class</span> ImageFileWriter<span class="ansi-blue-fg">(</span>ProcessObject<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   5427</span>     <span class="ansi-blue-fg">r&#34;&#34;&#34;Proxy of C++ itk::simple::ImageFileWriter class.&#34;&#34;&#34;</span>
-
-<span class="ansi-red-fg">RuntimeError</span>: Exception thrown in SimpleITK Show: /tmp/SimpleITK/Code/IO/src/sitkImageViewer.cxx:620:
-sitk::ERROR: No ImageJ/Fiji application found.</pre>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14425,7 +14373,7 @@ sitk::ERROR: No ImageJ/Fiji application found.</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7faf9a8bbc40&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f781475d9d0&gt;</pre>
 </div>
 
 </div>
