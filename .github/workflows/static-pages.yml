@@ -50,6 +50,8 @@ jobs:
       env: 
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
+        source env/bin/activate
+        which python3
         ~/sitkpy/bin/python3 generate_static_pages.py
     - name: Commit and push files
       run: |
