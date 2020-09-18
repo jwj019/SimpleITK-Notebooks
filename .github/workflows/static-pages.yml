@@ -46,6 +46,11 @@ jobs:
         virtualenv ~/sitkpy
         ~/sitkpy/bin/pip3 install -r requirements_dev.txt --pre --find-links https://github.com/SimpleITK/SimpleITK/releases/tag/latest
         ~/sitkpy/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension
+    - name: Install Fiji
+      run: |
+        wget https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
+        unzip fiji-linux64.zip -d ~
+        export PATH=$PATH:~/Fiji.app
     - name: Generate static pages
       env: 
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
