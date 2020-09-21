@@ -52,7 +52,7 @@ jobs:
       run: |
         mkdir -p ~/bin
         wget -nc -P ~/bin https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
-        unzip ~/bin/fiji-linux64.zip -d ~/bin
+        unzip -n ~/bin/fiji-linux64.zip -d ~/bin
         export PATH=$PATH:~/bin/Fiji.app
     - name: Generate static pages
       env: 
