@@ -10,3 +10,5 @@ Python/
 *.py
 Data/
 requirements_dev.txt
+Utilities/
+SharedImages/
