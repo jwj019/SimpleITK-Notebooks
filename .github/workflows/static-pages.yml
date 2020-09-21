@@ -50,7 +50,7 @@ jobs:
     - name: Install Fiji
       run: |
         mkdir -p ~/bin
-        wget -P ~/bin https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
+        wget -nc -P ~/bin https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
         unzip ~/bin/fiji-linux64.zip -d ~/bin
         export PATH=$PATH:~/bin/Fiji.app
     - name: Generate static pages
@@ -65,9 +65,9 @@ jobs:
         ls -la Python
         ls -la Python_html
         pwd
-        cp -L Python/*.png Python_html
-        cp -L Python/*.svg Python_html
-        cp -L Python/*.jpg Python_html
+        cp -L ./Python/*.png ./Python_html
+        cp -L ./Python/*.svg ./Python_html
+        cp -L ./Python/*.jpg ./Python_html
     - name: Commit and push files
       run: |
         git branch
