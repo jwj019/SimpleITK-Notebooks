@@ -23,6 +23,7 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- requirements_dev.txt
         git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git checkout origin/${GITHUB_REF##*/} -- Utilities
+        git checkout origin/${GITHUB_REF##*/} -- SharedImages/
         git reset HEAD
     - uses: actions/cache@v2
       with:
