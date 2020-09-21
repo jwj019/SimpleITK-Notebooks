@@ -63,8 +63,8 @@ jobs:
       run: |
         ls -la
         ls -la Python
-        mkdir -p Python_html
         ls -la Python_html
+        pwd
         cp -L Python/*.png Python_html
         cp -L Python/*.svg Python_html
         cp -L Python/*.jpg Python_html
