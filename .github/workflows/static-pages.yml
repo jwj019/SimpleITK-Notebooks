@@ -44,7 +44,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install enchant
         python3 -m pip install --upgrade pip
-        pip3 install virtualenv jupyter pandadocs nbconvert notebooktoall
+        pip3 install virtualenv jupyter pandadocs nbconvert matplotlib
         virtualenv ~/sitkpy
         ~/sitkpy/bin/pip3 install -r requirements_dev.txt --pre --find-links https://github.com/SimpleITK/SimpleITK/releases/tag/latest
         ~/sitkpy/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension
