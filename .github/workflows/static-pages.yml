@@ -47,9 +47,9 @@ jobs:
         ~/sitkpy/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension
     - name: Install Fiji
       run: |
-        wget -P Data https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
-        mkdir ~/bin
-        unzip Data/fiji-linux64.zip -d ~/bin
+        mkdir -p ~/bin
+        wget -P ~/bin https://downloads.imagej.net/fiji/latest/fiji-linux64.zip  
+        unzip ~/bin/fiji-linux64.zip -d ~/bin
         export PATH=$PATH:~/bin/Fiji.app
     - name: Generate static pages
       env: 
@@ -61,9 +61,9 @@ jobs:
       run: |
         ls -la
         ls -la Python
-        cp Python/*.png Python_html
-        cp Python/*.svg Python_html
-        cp Python/*.jpg Python_html
+        cp -L Python/*.png Python_html
+        cp -L Python/*.svg Python_html
+        cp -L Python/*.jpg Python_html
     - name: Commit and push files
       run: |
         git branch
