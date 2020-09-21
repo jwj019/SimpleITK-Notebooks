@@ -62,14 +62,9 @@ jobs:
         # ~/sitkpy/bin/python3 generate_static_pages.py
     - name: Copy image files
       run: |
-        ls -la
-        ls -la Python
-        ls -la Python_html
-        pwd
-        cp -L ./Python/*.png ./Python_html
-        cp -L ./Python/*.svg ./Python_html
-        cp -L ./Python/*.jpg ./Python_html
-        rm -rf SharedImages
+        cp -L Python/*.png Python_html
+        cp -L Python/*.svg Python_html
+        cp -L Python/*.jpg Python_html
     - name: Commit and push files
       run: |
         git branch
