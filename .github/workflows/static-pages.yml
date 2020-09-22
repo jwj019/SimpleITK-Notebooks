@@ -44,7 +44,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install enchant
         wget -nc -P ~/bin https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        apt install ~/bin/google-chrome-stable_current_amd64.deb
+        sudo apt install ~/bin/google-chrome-stable_current_amd64.deb
         wget -nc -P ~/bin https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
         unzip -n ~/bin/chromedriver_linux64.zip -d ~/bin
         python3 -m pip install --upgrade pip
