@@ -43,8 +43,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install enchant
+        wget -nc -P ~/bin https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        apt install ~/bin/google-chrome-stable_current_amd64.deb
+        wget -nc -P ~/bin https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+        unzip -n ~/bin/chromedriver_linux64.zip -d ~/bin
         python3 -m pip install --upgrade pip
-        pip3 install virtualenv jupyter pandadocs nbconvert matplotlib
+        pip3 install virtualenv jupyter pandadocs nbconvert matplotlib selenium
         virtualenv ~/sitkpy
         ~/sitkpy/bin/pip3 install -r requirements_dev.txt --pre --find-links https://github.com/SimpleITK/SimpleITK/releases/tag/latest
         ~/sitkpy/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension
@@ -59,7 +63,7 @@ jobs:
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
         source ~/sitkpy/bin/activate
-        ~/sitkpy/bin/python3 generate_static_pages.py
+        ~/sitkpy/bin/python3 webdrive_static_pages.py
     - name: Copy image files
       run: |
         cp -L Python/*.png Python_html
@@ -70,6 +74,8 @@ jobs:
         git branch
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git status
         git add -A
         git commit -m "Update static notebooks" -a
-        git push
+        git status
+        # git push
