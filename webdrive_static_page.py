@@ -28,17 +28,17 @@ driver = webdriver.Chrome(options=chrome_options)  # Optional argument, if not s
 driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
 time.sleep(5) # Let the user actually see something!
 driver.find_element_by_id("login_submit").click()
-time.sleep(5)
+time.sleep(2)
 cell_mnu = driver.find_element_by_id("celllink").click()
-time.sleep(5)
+time.sleep(2)
 run_cells = driver.find_element_by_id("run_all_cells").click()
 time.sleep(30)
 file_menu = driver.find_element_by_id("filelink").click()
-time.sleep(5)
+time.sleep(2)
 download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
-time.sleep(5)
-#download_html = driver.find_element_by_id("download_html").click()
-print(driver.get("http://localhost:8888/nbconvert/html/00_Setup.ipynb?download=true"))
+time.sleep(2)
+download_html = driver.find_element_by_id("download_html").click()
+# print(driver.get("http://localhost:8888/nbconvert/html/00_Setup.ipynb?download=true"))
 time.sleep(10)
 
 
