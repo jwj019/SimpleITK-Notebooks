@@ -64,7 +64,8 @@ jobs:
         SIMPLE_ITK_MEMORY_CONSTRAINED_ENVIRONMENT: 1
       run: |
         source ~/sitkpy/bin/activate
-        ~/sitkpy/bin/python3 webdrive_static_pages.py
+        echo | 
+        ~/sitkpy/bin/python3 webdrive_static_pages.py --NotebookApp.password='' --NotebookApp.token=''
     - name: Copy image files
       run: |
         cp -L Python/*.png Python_html
