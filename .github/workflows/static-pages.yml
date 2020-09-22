@@ -48,8 +48,9 @@ jobs:
         wget -nc -P ~/bin https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
         unzip -n ~/bin/chromedriver_linux64.zip -d ~/bin
         python3 -m pip install --upgrade pip
-        pip3 install virtualenv jupyter pandadocs nbconvert matplotlib selenium
+        pip3 install virtualenv
         virtualenv ~/sitkpy
+        ~/sitkpy/bin/pip3 install jupyter pandadocs nbconvert matplotlib selenium
         ~/sitkpy/bin/pip3 install -r requirements_dev.txt --pre --find-links https://github.com/SimpleITK/SimpleITK/releases/tag/latest
         ~/sitkpy/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension
     - name: Install Fiji
