@@ -40,9 +40,18 @@ for counter in range(5):
                 proc.kill()        
         print("Retrying ...")
 print("Out of loop ...")
-time.sleep(10)
   # Optional argument, if not specified will search path.
-driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
+
+for counter in range(5):
+    try:
+        driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
+        print("Got notebook")
+        break
+    except WebDriverException:
+        #Cross platform
+        time.sleep(5)
+        print("Retrying ...")
+
 # time.sleep(5) # Let the user actually see something!
 # driver.find_element_by_id("login_submit").click()
 time.sleep(10)
