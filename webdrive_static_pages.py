@@ -48,20 +48,27 @@ for counter in range(5):
                 proc.kill()        
         print("Retrying driver...")
 for notebook in notebooks: 
+    notebook_url = 'http://localhost:8888/notebooks/' + notebook
     for counter in range(5):
         try:
-            driver.get('http://localhost:8888/notebooks/' + notebook)
+            driver.get('notebook_url')
             print("Got notebook...")
             break
         except WebDriverException:
             #Cross platform
             time.sleep(5)
-            print("Retrying browser...")
+            print("Retrying " + notebook_url + "...")
 
     # time.sleep(5) # Let the user actually see something!
     # driver.find_element_by_id("login_submit").click()
-    time.sleep(10)
-    cell_mnu = driver.find_element_by_id("celllink").click()
+    for wait_counter in range(10):
+        try:
+            time.sleep(10)
+            cell_mnu = driver.find_element_by_id("celllink").click()
+            print(notebook + " done!")
+            break
+        except NoSuchElementException:
+            print("Waiting on notebook...")
     time.sleep(10)
     run_cells = driver.find_element_by_id("run_all_cells").click()
     for wait_counter in range(10):
