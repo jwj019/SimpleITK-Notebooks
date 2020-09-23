@@ -26,8 +26,8 @@ chrome_options.add_experimental_option("prefs", {
 
 driver = webdriver.Chrome(options=chrome_options)  # Optional argument, if not specified will search path.
 driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
-time.sleep(5) # Let the user actually see something!
-driver.find_element_by_id("login_submit").click()
+# time.sleep(5) # Let the user actually see something!
+# driver.find_element_by_id("login_submit").click()
 time.sleep(10)
 cell_mnu = driver.find_element_by_id("celllink").click()
 time.sleep(10)
