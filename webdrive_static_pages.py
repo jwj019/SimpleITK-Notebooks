@@ -70,7 +70,17 @@ for notebook in notebooks:
         except NoSuchElementException:
             print("Waiting on notebook...")
     time.sleep(10)
-    run_cells = driver.find_element_by_id("run_all_cells").click()
+
+    for wait_counter in range(10):
+        try:
+            time.sleep(10)
+            run_cells = driver.find_element_by_id("run_all_cells").click()
+            print(notebook + " done!")
+            break
+        except NoSuchElementException:
+            print("Waiting on notebook...")
+    time.sleep(10)
+    
     for wait_counter in range(10):
         try:
             time.sleep(10)
