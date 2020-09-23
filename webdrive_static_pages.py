@@ -116,6 +116,7 @@ for notebook in notebooks:
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
+    print("Done with " + notebook + "!")
 
 notebook_run.stdout.close()
 time.sleep(5) # Let the user actually see something!
