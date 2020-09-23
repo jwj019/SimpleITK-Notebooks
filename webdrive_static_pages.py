@@ -40,7 +40,7 @@ for counter in range(5):
                 proc.kill()        
         print("Retrying ...")
 print("Out of loop ...")
-
+time.sleep(10)
   # Optional argument, if not specified will search path.
 driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
 # time.sleep(5) # Let the user actually see something!
