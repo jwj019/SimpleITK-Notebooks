@@ -90,12 +90,32 @@ for notebook in notebooks:
         except NoSuchElementException:
             print("Waiting on kernel...")
 
-    file_menu = driver.find_element_by_id("filelink").click()
-    time.sleep(10)
-    download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
-    time.sleep(10)
-    download_html = driver.find_element_by_id("download_html").click()
-    time.sleep(10)
+    for wait_counter in range(10):
+        try:
+            time.sleep(10)
+            file_menu = driver.find_element_by_id("filelink").click()
+            print(notebook + " done!")
+            break
+        except NoSuchElementException:
+            print("Waiting on notebook...")
+
+    for wait_counter in range(10):
+        try:
+            time.sleep(10)
+            download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
+            print(notebook + " done!")
+            break
+        except NoSuchElementException:
+            print("Waiting on notebook...")
+    
+    for wait_counter in range(10):
+        try:
+            time.sleep(10)
+            download_html = driver.find_element_by_id("download_html").click()
+            print(notebook + " done!")
+            break
+        except NoSuchElementException:
+            print("Waiting on notebook...")
 
 notebook_run.stdout.close()
 time.sleep(5) # Let the user actually see something!
