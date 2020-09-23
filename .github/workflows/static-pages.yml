@@ -80,4 +80,4 @@ jobs:
         git add -A
         git commit -m "Update static notebooks" -a
         git status
-        # git push
+        git push
