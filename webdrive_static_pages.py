@@ -3,7 +3,7 @@ from subprocess import Popen, PIPE, STDOUT
 import os
 from selenium import webdriver
 import psutil
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import WebDriverException, NoSuchElementException
 
 current_dir = os.getcwd()
 ipynb_dir = os.path.abspath('./Python')
@@ -59,8 +59,13 @@ cell_mnu = driver.find_element_by_id("celllink").click()
 time.sleep(10)
 run_cells = driver.find_element_by_id("run_all_cells").click()
 for wait_counter in range(10):
-    time.sleep(10)
-    print(driver.find_element_by_class_name("kernel_idle_icon"))
+    try:
+        time.sleep(10)
+        print(driver.find_element_by_class_name("kernel_idle_icon"))
+        break
+    except NoSuchElementException:
+        print("Retrying ...")
+
 file_menu = driver.find_element_by_id("filelink").click()
 time.sleep(10)
 download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
