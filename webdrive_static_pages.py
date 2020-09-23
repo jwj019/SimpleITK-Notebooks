@@ -29,7 +29,7 @@ chrome_options.add_experimental_option("prefs", {
 for counter in range(5):
     try:
         driver = webdriver.Chrome(options=chrome_options)
-        print("WebDriver and WebBrowser initialized ...")
+        print("WebDriver and WebBrowser initialized...")
         break
     except WebDriverException:
         #Cross platform
@@ -38,19 +38,17 @@ for counter in range(5):
             # check whether the process name matches
             if proc.name() == PROCNAME:
                 proc.kill()        
-        print("Retrying ...")
-print("Out of loop ...")
-  # Optional argument, if not specified will search path.
+        print("Retrying driver...")
 
 for counter in range(5):
     try:
         driver.get('http://localhost:8888/notebooks/00_Setup.ipynb')
-        print("Got notebook")
+        print("Got notebook...")
         break
     except WebDriverException:
         #Cross platform
         time.sleep(5)
-        print("Retrying ...")
+        print("Retrying browser...")
 
 # time.sleep(5) # Let the user actually see something!
 # driver.find_element_by_id("login_submit").click()
@@ -62,9 +60,10 @@ for wait_counter in range(10):
     try:
         time.sleep(10)
         print(driver.find_element_by_class_name("kernel_idle_icon"))
+        print("00_Setup.ipynb done!")
         break
     except NoSuchElementException:
-        print("Retrying ...")
+        print("Waiting on kernel...")
 
 file_menu = driver.find_element_by_id("filelink").click()
 time.sleep(10)
