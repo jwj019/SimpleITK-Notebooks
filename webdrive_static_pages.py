@@ -11,7 +11,7 @@ html_dir = os.path.abspath('./Python_html')
 
 print(html_dir)
 
-notebook_run = Popen(["python3","-m","jupyter", "notebook","Python/00_Setup.ipynb", "--NotebookApp.password=''", "--NotebookApp.token=''", "--NotebookApp.iopub_msg_rate_limit=5000"], stdout=PIPE)
+notebook_run = Popen(["python3","-m","jupyter", "notebook","Python/00_Setup.ipynb", "--NotebookApp.password=''", "--NotebookApp.token=''", "--NotebookApp.iopub_msg_rate_limit=2000"], stdout=PIPE)
 
 
 chrome_options = webdriver.ChromeOptions()
