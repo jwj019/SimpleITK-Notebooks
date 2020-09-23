@@ -65,7 +65,7 @@ jobs:
       run: |
         source ~/sitkpy/bin/activate
         echo | 
-        ~/sitkpy/bin/python3 webdrive_static_pages.py --NotebookApp.password='' --NotebookApp.token=''
+        ~/sitkpy/bin/python3 webdrive_static_pages.py
     - name: Copy image files
       run: |
         cp -L Python/*.png Python_html
