@@ -52,7 +52,7 @@ for notebook in notebooks:
     for counter in range(5):
         try:
             driver.get('notebook_url')
-            print("Got notebook...")
+            print("Got " + notebook + "!")
             break
         except WebDriverException:
             #Cross platform
@@ -65,7 +65,7 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             cell_mnu = driver.find_element_by_id("celllink").click()
-            print(notebook + " done!")
+            print("Clicked cell menu")
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
@@ -75,7 +75,7 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             run_cells = driver.find_element_by_id("run_all_cells").click()
-            print(notebook + " done!")
+            print("Clicked cell run")
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
@@ -85,7 +85,7 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             print(driver.find_element_by_class_name("kernel_idle_icon"))
-            print(notebook + " done!")
+            print("Kernel done!")
             break
         except NoSuchElementException:
             print("Waiting on kernel...")
@@ -94,7 +94,7 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             file_menu = driver.find_element_by_id("filelink").click()
-            print(notebook + " done!")
+            print("Clicked file menu")
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
@@ -103,7 +103,7 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
-            print(notebook + " done!")
+            print("Clicked download submenu")
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
@@ -112,11 +112,11 @@ for notebook in notebooks:
         try:
             time.sleep(10)
             download_html = driver.find_element_by_id("download_html").click()
-            print(notebook + " done!")
+            print("Clicked html download")
             break
         except NoSuchElementException:
             print("Waiting on notebook...")
-    print("Done with " + notebook + "!")
+    print(notebook + " Done !")
 
 notebook_run.stdout.close()
 time.sleep(5) # Let the user actually see something!
