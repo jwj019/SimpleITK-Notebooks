@@ -4,6 +4,7 @@ import os
 from selenium import webdriver
 import psutil
 from selenium.common.exceptions import WebDriverException, NoSuchElementException
+import requests
 
 files = []
 ipynb_dir = os.path.abspath('./Python')
@@ -49,73 +50,72 @@ for counter in range(5):
         print("Retrying driver...")
 for notebook in notebooks: 
     notebook_url = 'http://localhost:8888/notebooks/' + notebook
-    for counter in range(5):
+    print(requests.get(notebook_url))
+    for counter in range(10):
         try:
-            driver.get('notebook_url')
+            driver.get(notebook_url)
             print("Got " + notebook + "!")
             break
         except WebDriverException:
             #Cross platform
-            time.sleep(5)
+            time.sleep(3)
             print("Retrying " + notebook_url + "...")
 
     # time.sleep(5) # Let the user actually see something!
     # driver.find_element_by_id("login_submit").click()
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             cell_mnu = driver.find_element_by_id("celllink").click()
             print("Clicked cell menu")
             break
         except NoSuchElementException:
             print("Waiting on cell menu...")
-    time.sleep(10)
+            time.sleep(3)
 
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             run_cells = driver.find_element_by_id("run_all_cells").click()
             print("Clicked cell run")
             break
         except NoSuchElementException:
             print("Waiting on cell run...")
-    time.sleep(10)
+            time.sleep(3)
     
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             print(driver.find_element_by_class_name("kernel_idle_icon"))
             print("Kernel done!")
             break
         except NoSuchElementException:
             print("Waiting on kernel...")
+            time.sleep(10)
 
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             file_menu = driver.find_element_by_id("filelink").click()
             print("Clicked file menu")
             break
         except NoSuchElementException:
             print("Waiting on file menu...")
+            time.sleep(3)
 
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
             print("Clicked download submenu")
             break
         except NoSuchElementException:
             print("Waiting on download submenu...")
+            time.sleep(3)
     
     for wait_counter in range(10):
         try:
-            time.sleep(10)
             download_html = driver.find_element_by_id("download_html").click()
             print("Clicked html download")
             break
         except NoSuchElementException:
             print("Waiting on html download...")
+            time.sleep(3)
     print(notebook + " Done !")
 
 notebook_run.stdout.close()
