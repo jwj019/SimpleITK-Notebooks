@@ -50,6 +50,7 @@ for counter in range(5):
         print("Retrying driver...")
 for notebook in notebooks: 
     notebook_url = 'http://localhost:8888/notebooks/' + notebook
+    time.sleep(10)
     print(requests.get(notebook_url))
     for counter in range(10):
         try:
