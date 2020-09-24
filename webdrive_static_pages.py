@@ -68,7 +68,7 @@ for notebook in notebooks:
             print("Clicked cell menu")
             break
         except NoSuchElementException:
-            print("Waiting on notebook...")
+            print("Waiting on cell menu...")
     time.sleep(10)
 
     for wait_counter in range(10):
@@ -78,7 +78,7 @@ for notebook in notebooks:
             print("Clicked cell run")
             break
         except NoSuchElementException:
-            print("Waiting on notebook...")
+            print("Waiting on cell run...")
     time.sleep(10)
     
     for wait_counter in range(10):
@@ -97,7 +97,7 @@ for notebook in notebooks:
             print("Clicked file menu")
             break
         except NoSuchElementException:
-            print("Waiting on notebook...")
+            print("Waiting on file menu...")
 
     for wait_counter in range(10):
         try:
@@ -106,7 +106,7 @@ for notebook in notebooks:
             print("Clicked download submenu")
             break
         except NoSuchElementException:
-            print("Waiting on notebook...")
+            print("Waiting on download submenu...")
     
     for wait_counter in range(10):
         try:
@@ -115,7 +115,7 @@ for notebook in notebooks:
             print("Clicked html download")
             break
         except NoSuchElementException:
-            print("Waiting on notebook...")
+            print("Waiting on html download...")
     print(notebook + " Done !")
 
 notebook_run.stdout.close()
