@@ -24,6 +24,8 @@ jobs:
         git checkout origin/${GITHUB_REF##*/} -- Data/manifest.json
         git checkout origin/${GITHUB_REF##*/} -- Utilities
         git checkout origin/${GITHUB_REF##*/} -- SharedImages/
+        sed -i '/^filter.RemoveAllCommands()$/s/^/#/' Python/11_Progress.ipynb
+        sed -i '/^watcher  = HTMLProgressWatcher(filter)$/s/^/#/' Python/11_Progress.ipynb
         git reset HEAD
     - uses: actions/cache@v2
       with:
