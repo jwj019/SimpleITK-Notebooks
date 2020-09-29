@@ -68,6 +68,7 @@ for notebook in notebooks:
         try:
             cell_mnu = driver.find_element_by_id("celllink").click()
             print("Clicked cell menu")
+            time.sleep(3)
             break
         except NoSuchElementException:
             print("Waiting on cell menu...")
@@ -77,6 +78,7 @@ for notebook in notebooks:
         try:
             run_cells = driver.find_element_by_id("run_all_cells").click()
             print("Clicked cell run")
+            time.sleep(3)
             break
         except NoSuchElementException:
             print("Waiting on cell run...")
@@ -86,6 +88,7 @@ for notebook in notebooks:
         try:
             print(driver.find_element_by_class_name("kernel_idle_icon"))
             print("Kernel done!")
+            time.sleep(3)
             break
         except NoSuchElementException:
             print("Waiting on kernel...")
@@ -95,6 +98,7 @@ for notebook in notebooks:
         try:
             file_menu = driver.find_element_by_id("filelink").click()
             print("Clicked file menu")
+            time.sleep(3)
             break
         except NoSuchElementException:
             print("Waiting on file menu...")
@@ -115,6 +119,7 @@ for notebook in notebooks:
             time.sleep(3)
             download_html = driver.find_element_by_id("download_html").click()
             print("Clicked html download")
+            time.sleep(3)
             break
         except NoSuchElementException:
             print("Waiting on html download...")
