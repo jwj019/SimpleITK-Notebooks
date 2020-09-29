@@ -89,7 +89,7 @@ for notebook in notebooks:
             break
         except NoSuchElementException:
             print("Waiting on kernel...")
-            time.sleep(10)
+            time.sleep(90)
 
     for wait_counter in range(10):
         try:
@@ -102,6 +102,7 @@ for notebook in notebooks:
 
     for wait_counter in range(10):
         try:
+            time.sleep(3)
             download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
             print("Clicked download submenu")
             break
@@ -111,11 +112,18 @@ for notebook in notebooks:
     
     for wait_counter in range(10):
         try:
+            time.sleep(3)
             download_html = driver.find_element_by_id("download_html").click()
             print("Clicked html download")
             break
         except NoSuchElementException:
             print("Waiting on html download...")
+            time.sleep(3)
+        except WebDriverException:
+            print("Waiting on html download...")
+            driver.find_element_by_id("filelink").click()
+            time.sleep(3)
+            download_menu = driver.find_element_by_xpath("//a[text()='Download as']").click()
             time.sleep(3)
     print(notebook + " Done !")
 
